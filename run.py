@@ -26,6 +26,8 @@ guessedCorrectLetters = []
 guessedIncorrectLetters = []
 #Get Random Instace for Word and Tip
 randomInstance = random.randint(0,150)
+# Check if it is the first round
+PLAYEREXISTS = False
 
 
 def fetchWord(file):
@@ -156,7 +158,9 @@ def fetchCustomDifficulty():
   
 def createPlayer(playerName, playerDifficulty):
     """Create new Player instance"""
+    global PLAYEREXISTS
     newPlayer = Player(playerName, playerDifficulty)
+    PLAYEREXISTS = True
     return newPlayer
 
 def displayLetterCount(word, guessedCorrectLetters):
@@ -270,7 +274,7 @@ def main():
     printTutorial()
     sleep(1)
     # Skip function if User already registered Name
-    if playerName:
+    if PLAYEREXISTS:
         pass
     else:
         playerName = fetchPlayerName()
