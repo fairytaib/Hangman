@@ -28,9 +28,6 @@ guessedIncorrectLetters = []
 randomInstance = random.randint(0,150)
 
 
-
-
-
 def fetchWord(file):
         """Fetch a random word"""
         word = file[randomInstance]["word"].lower()
@@ -72,11 +69,11 @@ def letPlayerChooseLanguage():
     chosenLanguage = inquirer.prompt(languageOptions)
     
     if chosenLanguage['language'] == "Quit":
+        print("\nGoodbye")
         quit()
 
     return chosenLanguage
     
-
 def letPlayerGuessLetter(file):
     """Let the player enter a guessed letter"""
     print("Guess one letter. Write 'help' for a tip or 'quit' to exit the game")
@@ -135,7 +132,7 @@ def fetchCustomDifficulty():
         return fetchCustomDifficulty()
     
     return customGuesses
-    
+  
 def createPlayer(playerName, playerGuesses):
     """Create new Player instance"""
     newPlayer = Player(playerName, playerGuesses)
@@ -204,15 +201,14 @@ def displayGuessConfirmation(guessletterValidation, player):
         
 def askForAnotherRound():
     """Ask the player if he wants to play another round"""
-    userChoice = input("Do you want to play again. Type 'y' for another round and 'n' to quit the program: ").lower()
-    if not userChoice.isalpha():
-        print("Please type 'y' or 'n'")
-        return askForAnotherRound()
-    elif  userChoice == "y" or userChoice == "n":
-        return userChoice
-    else:
-        print("Please type 'y' or 'n'")
-        return askForAnotherRound()
+    menuOptions = [
+        inquirer.List('menu',
+                      message="Do you want to play again",
+                      choices=["Play again", "Leave Game"],
+                      ),
+    ]
+    chosenMenu = inquirer.prompt(menuOptions)
+    return chosenMenu
         
 def checkForGameEnd(player, word, correctGuesses):
     """Checks if the player did win or lose yet"""
@@ -220,8 +216,7 @@ def checkForGameEnd(player, word, correctGuesses):
         return True    
 
 def endGame(choice):
-    if choice == "y":
-        global gameLoop
+    if choice == "Play again":
         main()
     else:
         quit()
