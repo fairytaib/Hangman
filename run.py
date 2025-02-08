@@ -30,6 +30,8 @@ randomInstance = random.randint(0,150)
 PLAYEREXISTS = False
 # Keeps track if the Tip was bought already
 BOUGHTTIP = False
+#Create gobal Player varibale
+player = None
 
 def fetchWord(file):
         """Fetch a random word"""
@@ -273,13 +275,14 @@ def resetPlayerHealth(difficulty, player):
     
 
 def main():
+    global player
     resetGlobalVariables()
-    printTutorial()
     sleep(1)
     # Skip function if User already registered Name
     if PLAYEREXISTS:
         pass
     else:
+        printTutorial()
         playerName = fetchPlayerName()
     language = letPlayerChooseLanguage()
     filePath = fetchLanguageFilePath(language)
