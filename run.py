@@ -113,10 +113,13 @@ def printTutorial():
 
 def fetchPlayerName():
     """Let the user name himself for a more immersiv experience"""
-    name = input("Enter your Name to start the game: ").capitalize()
+    name = input("Enter your Name to start the game or 'q' to end programm: ").capitalize()
     if not name.isalpha():
-        print("Please enter only letters\n")
+        print("Please enter only letters and no whitespace\n")
         return fetchPlayerName()
+    elif name == "Q":
+        print("Goodbye")
+        quit()
     else:
         return name
 
@@ -237,6 +240,7 @@ def resetGlobalVariables():
     guessedCorrectLetters = []
     guessedIncorrectLetters = []
     randomInstance = random.randint(0,150)
+
 def main():
     resetGlobalVariables()
     printTutorial()
