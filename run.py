@@ -245,7 +245,11 @@ def main():
     resetGlobalVariables()
     printTutorial()
     sleep(1)
-    playerName = fetchPlayerName()
+    # Skip function if User already registered Name
+    if playerName:
+        pass
+    else:
+        playerName = fetchPlayerName()
     language = letPlayerChooseLanguage()
     filePath = fetchLanguageFilePath(language)
     file = fetchFile(filePath)
