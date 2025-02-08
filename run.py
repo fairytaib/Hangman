@@ -1,11 +1,18 @@
-
+#Import Json Functionalitys
 import json
+#Import Library for Random Selection
 import random
+#Import Sleep for better user experience
 from time import sleep
+#import Colorama for colors
 import colorama
+from colorama import Fore, Back, Style
+#import simple_term_menu for menu options
+from simple_term_menu import TerminalMenu
+
 
 #Initialize Colorama
-colorama.init()
+colorama.init(autoreset=True)
 
 
 
