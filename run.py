@@ -74,9 +74,12 @@ def letPlayerChooseLanguage():
 
     return chosenLanguage
     
-def letPlayerGuessLetter(file):
+def letPlayerGuessLetter(file, player):
     """Let the player enter a guessed letter"""
-    print("Guess one letter. Write 'help' for a tip or 'quit' to exit the game")
+    if player.health > 1:
+        print("Guess one letter. Type 'tip' to buy a tip for one of your health points or write 'quit' to exit the game")
+    else:
+        print("Guess one letter. Write 'quit' to exit the game")
 
     guess = input("Your guess: ").lower()
 
@@ -84,7 +87,7 @@ def letPlayerGuessLetter(file):
         print("Only letters are allowed")
         sleep(2)
         return letPlayerGuessLetter(file)
-    if guess == "help":
+    if guess == "tip":
         help = fetchTip(file)
         print(help)
         sleep(2)
@@ -125,20 +128,35 @@ def fetchPlayerName():
 
 def fetchCustomDifficulty():
     """Let the user decide how many guesses he wants to have"""
-    try:
-        customGuesses = int(input("Enter the number of guesses you want to start the game with (1 - 12). The more guesses the easier the game gets: "))
-        if customGuesses < 1 or customGuesses > 12:
-            print("You cant do that. Lowest possible input is 1 and highest is 12.")
-            return fetchCustomDifficulty()
-    except ValueError:
-        print("Only numbers are allowed")
-        return fetchCustomDifficulty()
-    
-    return customGuesses
+    print("You can choose a custom difficulty. The harder you want the game to be, the less trys you will have\n")
+    print("Easy = 12 wrong guesses")
+    print("Medium = 8 wrong guesses")
+    print("Hard = 4 wrong guesses")
+    print("Impossible = One wrong guess and you lose")
+    difficultyOptions = [
+        inquirer.List('difficulty',
+                      message="Choose your difficulty",
+                      choices=["Easy", "Medium", "Hard", "Impossible", "Leave Game"],
+                      ),
+    ]
+    chosenDifficulty = inquirer.prompt(difficultyOptions)
+
+    match chosenDifficulty:
+        case "Easy":
+            return 12
+        case "Medium":
+            return 8
+        case "Hard":
+            return 4
+        case "Impossible":
+            return 1
+        case "Leave Game":
+            print("Goodbye")
+            quit()
   
-def createPlayer(playerName, playerGuesses):
+def createPlayer(playerName, playerDifficulty):
     """Create new Player instance"""
-    newPlayer = Player(playerName, playerGuesses)
+    newPlayer = Player(playerName, playerDifficulty)
     return newPlayer
 
 def displayLetterCount(word, guessedCorrectLetters):
@@ -241,6 +259,7 @@ def resetGlobalVariables():
     guessedIncorrectLetters = []
     randomInstance = random.randint(0,150)
 
+
 def main():
     resetGlobalVariables()
     printTutorial()
@@ -254,7 +273,11 @@ def main():
     filePath = fetchLanguageFilePath(language)
     file = fetchFile(filePath)
     playerHealth = fetchCustomDifficulty()
-    player = createPlayer(playerName, playerHealth)
+    # Skip function if User already exists
+    if playerName:
+        pass
+    else:
+        player = createPlayer(playerName, playerHealth)
     word = fetchWord(file)
     print(word)
     while True:
@@ -263,7 +286,7 @@ def main():
         if guessedIncorrectLetters:
             displayAlreadyGuessedLetters(guessedIncorrectLetters)
         sleep(1)
-        guess = letPlayerGuessLetter(file)
+        guess = letPlayerGuessLetter(file, player)
         checkForAlreadyGuessedLetter(guess, guessedCorrectLetters, guessedIncorrectLetters, file)
         letterValidation = checkIfAnwserIsCorrect(guess, word)
         reducePlayerHealth(letterValidation, player)
