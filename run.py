@@ -259,6 +259,11 @@ def resetGlobalVariables():
     guessedIncorrectLetters = []
     randomInstance = random.randint(0,150)
 
+def resetPlayerHealth(difficulty, player):
+    """Reset Difficulty / player health after a round"""
+    player.health = difficulty
+    
+
 
 def main():
     resetGlobalVariables()
@@ -275,7 +280,7 @@ def main():
     playerHealth = fetchCustomDifficulty()
     # Skip function if User already exists
     if playerName:
-        pass
+        resetPlayerHealth(playerHealth, player)
     else:
         player = createPlayer(playerName, playerHealth)
     word = fetchWord(file)
