@@ -1,0 +1,581 @@
+[
+    {
+      "word": "Apfel",
+      "tip": "Eine beliebte Frucht, die oft rot, grün oder gelb ist."
+    },
+    {
+      "word": "Baum",
+      "tip": "Eine große Pflanze mit Stamm und Blättern oder Nadeln."
+    },
+    {
+      "word": "Buch",
+      "tip": "Etwas, das man liest und oft viele Seiten hat."
+    },
+    {
+      "word": "Auto",
+      "tip": "Ein Fahrzeug mit vier Rädern, das Menschen transportiert."
+    },
+    {
+      "word": "Wasser",
+      "tip": "Eine lebenswichtige Flüssigkeit, die klar und trinkbar ist."
+    },
+    {
+      "word": "Sonne",
+      "tip": "Der Stern, der unser Sonnensystem erhellt und wärmt."
+    },
+    {
+      "word": "Mond",
+      "tip": "Der natürliche Satellit der Erde, sichtbar in der Nacht."
+    },
+    {
+      "word": "Fisch",
+      "tip": "Ein Tier, das im Wasser lebt und oft Flossen hat."
+    },
+    {
+      "word": "Himmel",
+      "tip": "Der Ort über uns, der oft blau oder bewölkt ist."
+    },
+    {
+      "word": "Brücke",
+      "tip": "Eine Konstruktion, die zwei Punkte verbindet."
+    },
+    {
+      "word": "Fluss",
+      "tip": "Ein langer Wasserlauf, der ins Meer oder einen See mündet."
+    },
+    {
+      "word": "Glocke",
+      "tip": "Ein Gegenstand, der bei Bewegung einen Klang erzeugt."
+    },
+    {
+      "word": "Katze",
+      "tip": "Ein beliebtes Haustier mit Schnurrhaaren."
+    },
+    {
+      "word": "Hund",
+      "tip": "Der beste Freund des Menschen."
+    },
+    {
+      "word": "Schule",
+      "tip": "Ein Ort, an dem Kinder und Jugendliche lernen."
+    },
+    {
+      "word": "Lehrer",
+      "tip": "Eine Person, die Wissen vermittelt."
+    },
+    {
+      "word": "Tisch",
+      "tip": "Ein Möbelstück mit einer flachen Oberfläche."
+    },
+    {
+      "word": "Stuhl",
+      "tip": "Ein Möbelstück, auf dem man sitzt."
+    },
+    {
+      "word": "Fenster",
+      "tip": "Ein durchsichtiges Element in der Wand."
+    },
+    {
+      "word": "Tür",
+      "tip": "Ein bewegliches Element, um einen Raum zu betreten oder zu verlassen."
+    },
+    {
+      "word": "Berg",
+      "tip": "Eine hohe Erhebung in der Landschaft."
+    },
+    {
+      "word": "Tal",
+      "tip": "Eine tiefe, oft grüne Landschaft zwischen Bergen."
+    },
+    {
+      "word": "Uhr",
+      "tip": "Ein Gerät zur Messung der Zeit."
+    },
+    {
+      "word": "Garten",
+      "tip": "Ein Ort mit Pflanzen und Blumen."
+    },
+    {
+      "word": "Zug",
+      "tip": "Ein langes Fahrzeug, das auf Schienen fährt."
+    },
+    {
+      "word": "Flugzeug",
+      "tip": "Ein Fahrzeug, das durch die Luft fliegt."
+    },
+    {
+      "word": "Haus",
+      "tip": "Ein Gebäude, in dem Menschen wohnen."
+    },
+    {
+      "word": "Brille",
+      "tip": "Etwas, das man auf die Nase setzt, um besser zu sehen."
+    },
+    {
+      "word": "Lampe",
+      "tip": "Ein Gerät, das Licht spendet."
+    },
+    {
+      "word": "Kerze",
+      "tip": "Ein Wachsstück mit Docht, das Licht gibt."
+    },
+    {
+      "word": "Tasche",
+      "tip": "Ein Behältnis, in dem man Dinge transportieren kann."
+    },
+    {
+      "word": "Schlüssel",
+      "tip": "Ein kleiner Gegenstand, mit dem man Türen öffnet."
+    },
+    {
+      "word": "Telefon",
+      "tip": "Ein Gerät, mit dem man Gespräche führen kann."
+    },
+    {
+      "word": "Computer",
+      "tip": "Ein elektronisches Gerät zur Datenverarbeitung."
+    },
+    {
+      "word": "Maus",
+      "tip": "Ein kleines Gerät zur Steuerung eines Computers."
+    },
+    {
+      "word": "Hut",
+      "tip": "Ein Kleidungsstück für den Kopf."
+    },
+    {
+      "word": "Schal",
+      "tip": "Ein langes Kleidungsstück, das man um den Hals trägt."
+    },
+    {
+      "word": "Jacke",
+      "tip": "Ein Kleidungsstück für die Oberkörperwärme."
+    },
+    {
+      "word": "Wald",
+      "tip": "Ein Gebiet mit vielen Bäumen."
+    },
+    {
+      "word": "Strand",
+      "tip": "Der sandige Bereich am Meer oder See."
+    },
+    {
+      "word": "Schnee",
+      "tip": "Weiße Kristalle, die im Winter vom Himmel fallen."
+    },
+    {
+      "word": "Regen",
+      "tip": "Wasser, das in Tropfen vom Himmel fällt."
+    },
+    {
+      "word": "Wind",
+      "tip": "Eine unsichtbare, aber spürbare Luftbewegung."
+    },
+    {
+      "word": "Blume",
+      "tip": "Eine Pflanze mit bunten Blüten."
+    },
+    {
+      "word": "Honig",
+      "tip": "Eine süße Substanz, die von Bienen hergestellt wird."
+    },
+    {
+      "word": "Milch",
+      "tip": "Eine weiße Flüssigkeit, die von Kühen stammt."
+    },
+    {
+      "word": "Brot",
+      "tip": "Ein Grundnahrungsmittel, das aus Mehl gebacken wird."
+    },
+    {
+      "word": "Kaffee",
+      "tip": "Ein beliebtes Heißgetränk mit Koffein."
+    },
+    {
+        "word": "Zucker",
+        "tip": "Ein süßes Lebensmittel, das oft in Desserts verwendet wird."
+    },
+    {
+        "word": "Salz",
+        "tip": "Ein weißes Gewürz, das Speisen würziger macht."
+    },
+    {
+        "word": "Eis",
+        "tip": "Gefrorenes Wasser oder eine süße, kalte Nachspeise."
+    },
+    {
+        "word": "Butter",
+        "tip": "Ein Milchprodukt, das oft aufs Brot gestrichen wird."
+    },
+    {
+        "word": "Käse",
+        "tip": "Ein Milchprodukt, das in vielen Sorten existiert."
+    },
+    {
+        "word": "Ei",
+        "tip": "Ein Produkt von Hühnern, oft zum Frühstück gegessen."
+    },
+    {
+        "word": "Tee",
+        "tip": "Ein heißes Getränk, oft mit Kräutern oder Blättern aufgebrüht."
+    },
+    {
+        "word": "Löffel",
+        "tip": "Ein Besteckstück, mit dem man Suppe isst."
+    },
+    {
+        "word": "Gabel",
+        "tip": "Ein Besteckstück mit Zinken."
+    },
+    {
+        "word": "Messer",
+        "tip": "Ein scharfes Besteckstück zum Schneiden."
+    },
+    {
+        "word": "Teller",
+        "tip": "Ein flaches Geschirrstück für Essen."
+    },
+    {
+        "word": "Glas",
+        "tip": "Ein durchsichtiges Gefäß zum Trinken."
+    },
+    {
+        "word": "Flasche",
+        "tip": "Ein Behälter für Flüssigkeiten."
+    },
+    {
+        "word": "Küche",
+        "tip": "Ein Raum, in dem Essen zubereitet wird."
+    },
+    {
+        "word": "Badezimmer",
+        "tip": "Ein Raum, in dem man sich wäscht."
+    },
+    {
+        "word": "Schrank",
+        "tip": "Ein Möbelstück zur Aufbewahrung von Kleidung oder Geschirr."
+    },
+    {
+        "word": "Bett",
+        "tip": "Ein Möbelstück zum Schlafen."
+    },
+    {
+        "word": "Decke",
+        "tip": "Ein weiches Tuch, das warm hält."
+    },
+    {
+        "word": "Kissen",
+        "tip": "Ein weiches Polster für den Kopf."
+    },
+    {
+        "word": "U-Bahn",
+        "tip": "Ein öffentliches Verkehrsmittel, das unterirdisch fährt."
+    },
+    {
+        "word": "Bus",
+        "tip": "Ein großes Fahrzeug für den öffentlichen Nahverkehr."
+    },
+    {
+        "word": "Taxi",
+        "tip": "Ein Auto, das Fahrgäste gegen Bezahlung transportiert."
+    },
+    {
+        "word": "Fahrrad",
+        "tip": "Ein Fahrzeug mit zwei Rädern und Pedalen."
+    },
+    {
+        "word": "Ampel",
+        "tip": "Ein Lichtsignal zur Verkehrsregelung."
+    },
+    {
+        "word": "Straße",
+        "tip": "Ein Weg für Fahrzeuge und Fußgänger."
+    },
+    {
+        "word": "Brunnen",
+        "tip": "Eine Konstruktion, aus der Wasser fließt."
+    },
+    {
+        "word": "Park",
+        "tip": "Ein öffentlicher Ort mit Grünflächen und Bänken."
+    },
+    {
+        "word": "Spielplatz",
+        "tip": "Ein Ort mit Schaukeln und Rutschen für Kinder."
+    },
+    {
+        "word": "Krankenhaus",
+        "tip": "Ein Gebäude, in dem kranke Menschen behandelt werden."
+    },
+    {
+        "word": "Arzt",
+        "tip": "Eine Person, die Menschen medizinisch hilft."
+    },
+    {
+        "word": "Zahnarzt",
+        "tip": "Ein Arzt, der sich um die Zähne kümmert."
+    },
+    {
+        "word": "Apotheke",
+        "tip": "Ein Geschäft, in dem man Medikamente bekommt."
+    },
+    {
+        "word": "Feuerwehr",
+        "tip": "Eine Organisation, die Brände löscht."
+    },
+    {
+        "word": "Polizei",
+        "tip": "Eine Behörde, die für Sicherheit und Ordnung sorgt."
+    },
+    {
+        "word": "Rathaus",
+        "tip": "Ein Gebäude, in dem die Stadtverwaltung sitzt."
+    },
+    {
+        "word": "Kirche",
+        "tip": "Ein Gebäude für religiöse Gottesdienste."
+    },
+    {
+        "word": "Museum",
+        "tip": "Ein Ort, an dem Kunst oder Geschichte ausgestellt wird."
+    },
+    {
+        "word": "Bibliothek",
+        "tip": "Ein Ort, an dem man Bücher ausleihen kann."
+    },
+    {
+        "word": "Zoo",
+        "tip": "Ein Ort, an dem Tiere beobachtet werden können."
+    },
+    {
+        "word": "Kino",
+        "tip": "Ein Ort, an dem Filme gezeigt werden."
+    },
+    {
+        "word": "Theater",
+        "tip": "Ein Ort, an dem Schauspieler auf der Bühne auftreten."
+    },
+    {
+        "word": "Markt",
+        "tip": "Ein Platz, an dem Waren verkauft werden."
+    },
+    {
+        "word": "Supermarkt",
+        "tip": "Ein Geschäft, in dem man Lebensmittel kauft."
+    },
+    {
+        "word": "Bäckerei",
+        "tip": "Ein Geschäft, das Brot und Brötchen verkauft."
+    },
+    {
+        "word": "Metzgerei",
+        "tip": "Ein Geschäft, das Fleisch verkauft."
+    },
+    {
+        "word": "Tankstelle",
+        "tip": "Ein Ort, an dem Autos Benzin oder Diesel tanken."
+    },
+    {
+        "word": "Post",
+        "tip": "Ein Ort, an dem Briefe und Pakete aufgegeben werden."
+    },
+    {
+        "word": "Brief",
+        "tip": "Eine Nachricht, die auf Papier geschrieben und verschickt wird."
+    },
+    {
+        "word": "Paket",
+        "tip": "Ein Gegenstand, der in einer Kiste oder einem Umschlag verschickt wird."
+    },
+    {
+        "word": "Zeitung",
+        "tip": "Ein gedrucktes Medium mit aktuellen Nachrichten."
+    },
+    {
+        "word": "Fernseher",
+        "tip": "Ein Gerät, auf dem man Filme und Nachrichten sehen kann."
+    },
+    {
+        "word": "Radio",
+        "tip": "Ein Gerät, mit dem man Musik und Nachrichten hören kann."
+    },
+    {
+        "word": "Mikrofon",
+        "tip": "Ein Gerät, das Stimmen und Geräusche aufnimmt."
+    },
+    {
+        "word": "Lautsprecher",
+        "tip": "Ein Gerät, das Geräusche verstärkt und hörbar macht."
+    },
+    {
+        "word": "Kamera",
+        "tip": "Ein Gerät, mit dem man Fotos oder Videos aufnimmt."
+    },
+    {
+        "word": "Bildschirm",
+        "tip": "Ein Gerät, auf dem digitale Inhalte angezeigt werden."
+    },
+    {
+        "word": "Tastatur",
+        "tip": "Ein Eingabegerät mit Buchstaben und Zahlen für den Computer."
+    },
+    {
+        "word": "Drucker",
+        "tip": "Ein Gerät, das digitale Dokumente auf Papier ausgibt."
+    },
+    {
+        "word": "Schere",
+        "tip": "Ein Werkzeug zum Schneiden von Papier oder Stoff."
+    },
+    {
+        "word": "Kleber",
+        "tip": "Eine Substanz, die Dinge miteinander verbindet."
+    },
+    {
+        "word": "Stift",
+        "tip": "Ein Schreibgerät mit Tinte oder Bleistiftmine."
+    },
+    {
+        "word": "Radiergummi",
+        "tip": "Ein kleines Objekt, das Bleistiftstriche entfernt."
+    },
+    {
+        "word": "Papier",
+        "tip": "Ein Material, auf dem man schreibt oder druckt."
+    },
+    {
+        "word": "Notizbuch",
+        "tip": "Ein kleines Buch zum Aufschreiben von Gedanken oder Terminen."
+    },
+    {
+        "word": "Rucksack",
+        "tip": "Ein Behälter mit zwei Trägern, der auf dem Rücken getragen wird."
+    },
+    {
+        "word": "Koffer",
+        "tip": "Ein Behälter mit Griff, um Kleidung und Dinge auf Reisen mitzunehmen."
+    },
+    {
+        "word": "Regenschirm",
+        "tip": "Ein Gegenstand, der vor Regen schützt."
+    },
+    {
+        "word": "Handschuhe",
+        "tip": "Ein Kleidungsstück für die Hände, das sie wärmt."
+    },
+    {
+        "word": "Schuhe",
+        "tip": "Ein Kleidungsstück für die Füße."
+    },
+    {
+        "word": "Hose",
+        "tip": "Ein Kleidungsstück für die Beine."
+    },
+    {
+        "word": "Pullover",
+        "tip": "Ein warmes Kleidungsstück für den Oberkörper."
+    },
+    {
+        "word": "Hemd",
+        "tip": "Ein Kleidungsstück mit Kragen und Knöpfen."
+    },
+    {
+        "word": "Rock",
+        "tip": "Ein Kleidungsstück für Frauen, das die Beine teilweise bedeckt."
+    },
+    {
+        "word": "Kleid",
+        "tip": "Ein einteiliges Kleidungsstück für Frauen."
+    },
+    {
+        "word": "Socken",
+        "tip": "Ein Kleidungsstück für die Füße, das in Schuhe getragen wird."
+    },
+    {
+        "word": "Schmuck",
+        "tip": "Dekorative Accessoires wie Ringe, Ketten oder Armbänder."
+    },
+    {
+        "word": "Uhr",
+        "tip": "Ein Gerät, das die Zeit anzeigt und oft am Handgelenk getragen wird."
+    },
+    {
+        "word": "Brunnen",
+        "tip": "Eine Konstruktion, aus der Wasser fließt."
+    },
+    {
+        "word": "Wolke",
+        "tip": "Weiße oder graue Formationen am Himmel, die Regen bringen können."
+    },
+    {
+        "word": "Stern",
+        "tip": "Ein leuchtendes Objekt im Nachthimmel."
+    },
+    {
+        "word": "Blitz",
+        "tip": "Ein heller Lichtstrahl, der während eines Gewitters erscheint."
+    },
+    {
+        "word": "Donner",
+        "tip": "Ein lautes Geräusch nach einem Blitz."
+    },
+    {
+        "word": "Erde",
+        "tip": "Unser Planet oder der Boden unter unseren Füßen."
+    },
+    {
+        "word": "Sand",
+        "tip": "Feine Körner, die oft an Stränden zu finden sind."
+    },
+    {
+        "word": "Stein",
+        "tip": "Ein harter natürlicher Gegenstand, oft grau oder braun."
+    },
+    {
+        "word": "Muschel",
+        "tip": "Eine harte Schale, die man oft am Strand findet."
+    },
+    {
+        "word": "Meer",
+        "tip": "Ein großes Salzwassergebiet auf der Erde."
+    },
+    {
+        "word": "See",
+        "tip": "Ein Binnengewässer mit Süßwasser."
+    },
+    {
+        "word": "Welle",
+        "tip": "Eine Bewegung des Wassers, oft am Strand sichtbar."
+    },
+    {
+        "word": "Schiff",
+        "tip": "Ein großes Fahrzeug, das auf dem Wasser fährt."
+    },
+    {
+        "word": "Boot",
+        "tip": "Ein kleines Wasserfahrzeug."
+    },
+    {
+        "word": "Hafen",
+        "tip": "Ein Ort, an dem Schiffe anlegen."
+    },
+    {
+        "word": "Kompass",
+        "tip": "Ein Gerät zur Bestimmung der Himmelsrichtungen."
+    },
+    {
+        "word": "Fahne",
+        "tip": "Ein Stück Stoff mit Symbolen oder Farben, das oft ein Land repräsentiert."
+    },
+    {
+        "word": "Schlüsselbund",
+        "tip": "Eine Sammlung von Schlüsseln an einem Ring."
+    },
+    {
+        "word": "Laterne",
+        "tip": "Eine tragbare Lichtquelle, oft für draußen genutzt."
+    }
+    ]
+      
+      
+  

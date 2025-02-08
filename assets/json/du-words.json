@@ -1,0 +1,592 @@
+[
+    {
+      "word": "nacht",
+      "tip": "De tijd van de dag waarin de zon niet zichtbaar is."
+    },
+    {
+      "word": "zon",
+      "tip": "De ster die het licht en de warmte op aarde geeft."
+    },
+    {
+      "word": "maan",
+      "tip": "De natuurlijke satelliet van de aarde die 's nachts zichtbaar is."
+    },
+    {
+      "word": "ster",
+      "tip": "Een helder hemellichaam dat aan de nachtelijke hemel schijnt."
+    },
+    {
+      "word": "regen",
+      "tip": "Waterdruppels die uit de lucht vallen."
+    },
+    {
+      "word": "sneeuw",
+      "tip": "Witte, bevroren waterkristallen die uit de lucht vallen."
+    },
+    {
+      "word": "ijs",
+      "tip": "Bevroren water dat glad en koud is."
+    },
+    {
+      "word": "wind",
+      "tip": "Lucht die beweegt en vaak voelbaar is op de huid."
+    },
+    {
+      "word": "boom",
+      "tip": "Een hoge plant met een stam en takken."
+    },
+    {
+      "word": "blad",
+      "tip": "Het groene deel van een boom of plant."
+    },
+    {
+      "word": "bloem",
+      "tip": "Een gekleurde plant die vaak lekker ruikt."
+    },
+    {
+      "word": "gras",
+      "tip": "Korte groene plantjes die veel in tuinen en parken groeien."
+    },
+    {
+      "word": "rivier",
+      "tip": "Een stromend water dat naar de zee gaat."
+    },
+    {
+      "word": "zee",
+      "tip": "Een groot wateroppervlak met zout water."
+    },
+    {
+      "word": "meer",
+      "tip": "Een groot wateroppervlak met zoet water."
+    },
+    {
+      "word": "vogel",
+      "tip": "Een dier met vleugels dat kan vliegen."
+    },
+    {
+      "word": "vis",
+      "tip": "Een dier dat in het water leeft en zwemt."
+    },
+    {
+      "word": "kat",
+      "tip": "Een klein, harig huisdier met snorharen."
+    },
+    {
+      "word": "hond",
+      "tip": "Een trouwe viervoeter die vaak als huisdier wordt gehouden."
+    },
+    {
+      "word": "paard",
+      "tip": "Een groot dier waarop mensen kunnen rijden."
+    },
+    {
+      "word": "koe",
+      "tip": "Een dier dat melk geeft en vaak in weilanden staat."
+    },
+    {
+      "word": "varken",
+      "tip": "Een roze boerderijdier dat van modder houdt."
+    },
+    {
+      "word": "fiets",
+      "tip": "Een voertuig met twee wielen dat je met je benen aandrijft."
+    },
+    {
+      "word": "auto",
+      "tip": "Een voertuig met vier wielen dat door een motor wordt aangedreven."
+    },
+    {
+      "word": "bus",
+      "tip": "Een groot voertuig voor openbaar vervoer."
+    },
+    {
+      "word": "trein",
+      "tip": "Een lang voertuig dat op rails rijdt."
+    },
+    {
+      "word": "vliegtuig",
+      "tip": "Een voertuig dat door de lucht vliegt."
+    },
+    {
+      "word": "brug",
+      "tip": "Een constructie die over water of een weg gaat."
+    },
+    {
+      "word": "straat",
+      "tip": "Een weg waar auto's en mensen op lopen."
+    },
+    {
+      "word": "huis",
+      "tip": "Een plek waar mensen wonen."
+    },
+    {
+      "word": "deur",
+      "tip": "Een opening in een muur om in en uit een ruimte te gaan."
+    },
+    {
+      "word": "raam",
+      "tip": "Een opening in een muur met glas erin."
+    },
+    {
+      "word": "stoel",
+      "tip": "Een meubelstuk waarop je kunt zitten."
+    },
+    {
+      "word": "tafel",
+      "tip": "Een meubelstuk waarop je spullen kunt zetten of eten."
+    },
+    {
+      "word": "bed",
+      "tip": "Een meubelstuk waarin je slaapt."
+    },
+    {
+      "word": "lamp",
+      "tip": "Een voorwerp dat licht geeft."
+    },
+    {
+      "word": "spiegel",
+      "tip": "Een oppervlak waarin je je eigen reflectie kunt zien."
+    },
+    {
+      "word": "televisie",
+      "tip": "Een apparaat waarop je films en programma's kunt kijken."
+    },
+    {
+      "word": "radio",
+      "tip": "Een apparaat waarmee je muziek en nieuws kunt luisteren."
+    },
+    {
+      "word": "telefoon",
+      "tip": "Een apparaat waarmee je kunt bellen en berichten sturen."
+    },
+    {
+      "word": "computer",
+      "tip": "Een elektronisch apparaat waarmee je kunt werken en spelen."
+    },
+    {
+      "word": "boek",
+      "tip": "Een verzameling van pagina's met tekst en soms plaatjes."
+    },
+    {
+      "word": "krant",
+      "tip": "Een gedrukt medium met het dagelijkse nieuws."
+    },
+    {
+      "word": "school",
+      "tip": "Een plek waar kinderen en volwassenen leren."
+    },
+    {
+      "word": "bibliotheek",
+      "tip": "Een plek waar je boeken kunt lenen."
+    },
+    {
+      "word": "museum",
+      "tip": "Een plek waar kunst en geschiedenis worden tentoongesteld."
+    },
+    {
+      "word": "kerk",
+      "tip": "Een gebouw waar mensen bidden en samenkomen voor religie."
+    },
+    {
+      "word": "markt",
+      "tip": "Een plek waar mensen verse producten verkopen."
+    },
+    {
+      "word": "restaurant",
+      "tip": "Een plek waar je kunt eten en drinken bestellen."
+    },
+    {
+      "word": "appel",
+      "tip": "Een ronde vrucht die rood, groen of geel kan zijn."
+    },
+    {
+      "word": "banaan",
+      "tip": "Een lange, gele vrucht met een zachte binnenkant."
+    },
+    {
+      "word": "druif",
+      "tip": "Een kleine, ronde vrucht die in trossen groeit."
+    },
+    {
+      "word": "peer",
+      "tip": "Een groene of gele vrucht die breder aan de onderkant is."
+    },
+    {
+      "word": "aardbei",
+      "tip": "Een kleine, rode vrucht met zaadjes aan de buitenkant."
+    },
+    {
+      "word": "sinaasappel",
+      "tip": "Een oranje citrusvrucht die veel vitamine C bevat."
+    },
+    {
+      "word": "citroen",
+      "tip": "Een gele citrusvrucht met een zure smaak."
+    },
+    {
+      "word": "meloen",
+      "tip": "Een grote, ronde vrucht met sappig vruchtvlees."
+    },
+    {
+      "word": "kers",
+      "tip": "Een kleine, rode vrucht met een pit in het midden."
+    },
+    {
+      "word": "tomaat",
+      "tip": "Een rode vrucht die vaak als groente wordt gebruikt."
+    },
+    {
+      "word": "wortel",
+      "tip": "Een lange, oranje groente die onder de grond groeit."
+    },
+    {
+      "word": "komkommer",
+      "tip": "Een lange, groene groente die veel water bevat."
+    },
+    {
+      "word": "paprika",
+      "tip": "Een gekleurde groente die rood, geel, groen of oranje kan zijn."
+    },
+    {
+      "word": "ui",
+      "tip": "Een groente met een sterke geur en smaak die vaak in gerechten wordt gebruikt."
+    },
+    {
+      "word": "knoflook",
+      "tip": "Een kleine, witte bol die gerechten extra smaak geeft."
+    },
+    {
+      "word": "brood",
+      "tip": "Een gebakken product gemaakt van meel en water."
+    },
+    {
+      "word": "kaas",
+      "tip": "Een zuivelproduct gemaakt van melk, vaak geel van kleur."
+    },
+    {
+      "word": "boter",
+      "tip": "Een vet product gemaakt van melk, gebruikt op brood."
+    },
+    {
+      "word": "melk",
+      "tip": "Een witte drank die van koeien komt."
+    },
+    {
+      "word": "eieren",
+      "tip": "Voedingsmiddelen met een harde schaal, vaak gebruikt bij ontbijt."
+    },
+    {
+      "word": "water",
+      "tip": "Een doorzichtige vloeistof die essentieel is voor het leven."
+    },
+    {
+      "word": "thee",
+      "tip": "Een warme drank gemaakt van kruiden of bladeren."
+    },
+    {
+      "word": "koffie",
+      "tip": "Een donkere, cafeïnehoudende drank die energie geeft."
+    },
+    {
+      "word": "suiker",
+      "tip": "Een zoete stof die vaak in thee of koffie wordt gedaan."
+    },
+    {
+      "word": "zout",
+      "tip": "Een witte substantie die gerechten meer smaak geeft."
+    },
+    {
+      "word": "peper",
+      "tip": "Een kruidige specerij die gerechten pittiger maakt."
+    },
+    {
+      "word": "mes",
+      "tip": "Een scherp gereedschap om voedsel mee te snijden."
+    },
+    {
+      "word": "vork",
+      "tip": "Een gebruiksvoorwerp met tanden om eten mee op te pakken."
+    },
+    {
+      "word": "lepel",
+      "tip": "Een gebruiksvoorwerp met een ronde kom om soep of yoghurt te eten."
+    },
+    {
+      "word": "bord",
+      "tip": "Een plat object waarop eten wordt geserveerd."
+    },
+    {
+      "word": "glas",
+      "tip": "Een doorzichtige beker waarin je water of sap drinkt."
+    },
+    {
+      "word": "pan",
+      "tip": "Een kookgerei waarin je eten kunt bakken of koken."
+    },
+    {
+      "word": "oven",
+      "tip": "Een keukenapparaat waarmee je eten kunt bakken of braden."
+    },
+    {
+      "word": "koelkast",
+      "tip": "Een apparaat waarin je eten koud bewaart."
+    },
+    {
+      "word": "wasmachine",
+      "tip": "Een apparaat waarin je kleding schoonmaakt."
+    },
+    {
+      "word": "stofzuiger",
+      "tip": "Een apparaat waarmee je stof en vuil van de vloer verwijdert."
+    },
+    {
+      "word": "strijkijzer",
+      "tip": "Een apparaat waarmee je kleding glad maakt."
+    },
+    {
+      "word": "horloge",
+      "tip": "Een klein apparaat om de tijd af te lezen, vaak om de pols gedragen."
+    },
+    {
+      "word": "bril",
+      "tip": "Een hulpmiddel voor beter zicht, gedragen op de neus."
+    },
+    {
+      "word": "paraplu",
+      "tip": "Een voorwerp dat je beschermt tegen de regen."
+    },
+    {
+      "word": "tas",
+      "tip": "Een voorwerp waarin je spullen kunt meenemen."
+    },
+    {
+      "word": "sleutel",
+      "tip": "Een klein metalen object om een deur te openen."
+    },
+    {
+      "word": "fietshelm",
+      "tip": "Een beschermend voorwerp dat je op je hoofd draagt tijdens het fietsen."
+    },
+    {
+      "word": "gordijn",
+      "tip": "Een doek dat een raam bedekt."
+    },
+    {
+      "word": "tapijt",
+      "tip": "Een zachte bedekking voor de vloer."
+    },
+    {
+      "word": "bank",
+      "tip": "Een groot meubelstuk waarop meerdere mensen kunnen zitten."
+    },
+    {
+      "word": "spiegel",
+      "tip": "Een glasoppervlak waarin je je eigen reflectie kunt zien."
+    },
+    {
+      "word": "kussen",
+      "tip": "Een zacht voorwerp waarop je hoofd rust tijdens het slapen."
+    },
+    {
+      "word": "deken",
+      "tip": "Een groot stuk stof dat je warm houdt tijdens het slapen."
+    },
+    {
+        "word": "zomer",
+        "tip": "Het seizoen met het warmste weer van het jaar."
+    },
+    {
+        "word": "winter",
+        "tip": "Het seizoen met het koudste weer van het jaar."
+    },
+    {
+        "word": "lente",
+        "tip": "Het seizoen waarin bloemen bloeien en de temperaturen stijgen."
+    },
+    {
+        "word": "herfst",
+        "tip": "Het seizoen waarin de bladeren van de bomen vallen."
+    },
+    {
+        "word": "dag",
+        "tip": "De tijd van de dag wanneer het licht is."
+    },
+    {
+        "word": "avond",
+        "tip": "De tijd van de dag wanneer de zon ondergaat."
+    },
+    {
+        "word": "ochtend",
+        "tip": "De tijd van de dag wanneer de zon opkomt."
+    },
+    {
+        "word": "middag",
+        "tip": "De tijd van de dag tussen de ochtend en de avond."
+    },
+    {
+        "word": "feest",
+        "tip": "Een bijeenkomst voor plezier en viering."
+    },
+    {
+        "word": "vakantie",
+        "tip": "Een periode waarin je niet werkt en vaak reist."
+    },
+    {
+        "word": "werk",
+        "tip": "Een activiteit waarvoor je betaald krijgt."
+    },
+    {
+        "word": "school",
+        "tip": "Een plaats waar kinderen en jongeren leren."
+    },
+    {
+        "word": "leraar",
+        "tip": "Iemand die lesgeeft in een school of andere leeromgeving."
+    },
+    {
+        "word": "student",
+        "tip": "Iemand die studeert aan een school of universiteit."
+    },
+    {
+        "word": "boek",
+        "tip": "Een verzameling van geschreven of gedrukte bladen papier."
+    },
+    {
+        "word": "pen",
+        "tip": "Een schrijfinstrument met inkt."
+    },
+    {
+        "word": "papier",
+        "tip": "Een dunne vellen materiaal waarop je kunt schrijven of tekenen."
+    },
+    {
+        "word": "schrift",
+        "tip": "Een boek waarin je notities maakt."
+    },
+    {
+        "word": "kaart",
+        "tip": "Een tekening of afbeelding van een geografisch gebied."
+    },
+    {
+        "word": "foto",
+        "tip": "Een afbeelding die je maakt met een camera."
+    },
+    {
+        "word": "video",
+        "tip": "Beelden in beweging, vaak met geluid."
+    },
+    {
+        "word": "computer",
+        "tip": "Een apparaat waarmee je digitale taken uitvoert."
+    },
+    {
+        "word": "telefoon",
+        "tip": "Een apparaat voor communicatie via spraak of tekst."
+    },
+    {
+        "word": "tablet",
+        "tip": "Een draagbaar apparaat met een touchscreen."
+    },
+    {
+        "word": "laptop",
+        "tip": "Een draagbare computer die je op schoot kunt gebruiken."
+    },
+    {
+        "word": "internet",
+        "tip": "Een wereldwijd netwerk voor het delen van informatie."
+    },
+    {
+        "word": "website",
+        "tip": "Een verzameling van pagina's op internet die gerelateerd zijn."
+    },
+    {
+        "word": "app",
+        "tip": "Een programma voor je telefoon of computer."
+    },
+    {
+        "word": "sociale media",
+        "tip": "Platforms waar je berichten, foto's en video's deelt."
+    },
+    {
+        "word": "e-mail",
+        "tip": "Een digitale brief die via internet wordt verzonden."
+    },
+    {
+        "word": "bericht",
+        "tip": "Een korte tekst of mededeling die wordt verstuurd."
+    },
+    {
+        "word": "televisie",
+        "tip": "Een apparaat om programma’s en films te kijken."
+    },
+    {
+        "word": "film",
+        "tip": "Bewegende beelden die een verhaal vertellen."
+    },
+    {
+        "word": "serie",
+        "tip": "Een reeks van afleveringen van een verhaal op televisie."
+    },
+    {
+        "word": "boekwinkel",
+        "tip": "Een winkel die boeken verkoopt."
+    },
+    {
+        "word": "supermarkt",
+        "tip": "Een grote winkel waar je voedsel en huishoudelijke artikelen kunt kopen."
+    },
+    {
+        "word": "winkel",
+        "tip": "Een plaats waar je spullen kunt kopen."
+    },
+    {
+        "word": "restaurant",
+        "tip": "Een plaats waar je kunt eten en drinken."
+    },
+    {
+        "word": "koffiehuis",
+        "tip": "Een plaats waar je koffie en gebak kunt drinken."
+    },
+    {
+        "word": "bar",
+        "tip": "Een plek waar je drankjes kunt bestellen en drinken."
+    },
+    {
+        "word": "markt",
+        "tip": "Een plek waar goederen worden verkocht, vaak buiten."
+    },
+    {
+        "word": "bank",
+        "tip": "Een financiële instelling waar je geld kunt bewaren."
+    },
+    {
+        "word": "ziekenhuis",
+        "tip": "Een plek waar mensen behandeld worden wanneer ze ziek zijn."
+    },
+    {
+        "word": "dokter",
+        "tip": "Een persoon die mensen behandelt wanneer ze ziek zijn."
+    },
+    {
+        "word": "apotheek",
+        "tip": "Een winkel waar medicijnen worden verkocht."
+    },
+    {
+        "word": "schoolbord",
+        "tip": "Een bord waarop de leraar met krijt schrijft."
+    },
+    {
+        "word": "bord",
+        "tip": "Een vlak voorwerp waarop je voedsel kunt leggen."
+    },
+    {
+        "word": "kampeerplaats",
+        "tip": "Een plek waar je kunt kamperen tijdens je vakantie."
+    },
+    {
+        "word": "tent",
+        "tip": "Een draagbare structuur om in te slapen tijdens het kamperen."
+    }
+]
+      
+    

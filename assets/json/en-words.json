@@ -1,0 +1,612 @@
+[
+    {
+      "word": "apple",
+      "tip": "A common fruit, often red or green."
+    },
+    {
+      "word": "banana",
+      "tip": "A fruit that’s long and soft."
+    },
+    {
+      "word": "cherry",
+      "tip": "A small round fruit, often in clusters."
+    },
+    {
+      "word": "dog",
+      "tip": "A domesticated animal, often kept as a pet."
+    },
+    {
+      "word": "elephant",
+      "tip": "A large land mammal with a long nose."
+    },
+    {
+      "word": "guitar",
+      "tip": "An instrument with six strings, often played with fingers."
+    },
+    {
+      "word": "house",
+      "tip": "A place where people live."
+    },
+    {
+      "word": "island",
+      "tip": "A small piece of land surrounded by water."
+    },
+    {
+      "word": "jungle",
+      "tip": "A dense forest, typically warm and wet."
+    },
+    {
+      "word": "kite",
+      "tip": "A flying object, often seen in the sky on a windy day."
+    },
+    {
+      "word": "lion",
+      "tip": "A big cat, often called the king of the animals."
+    },
+    {
+      "word": "mountain",
+      "tip": "A large elevated landform, usually higher than a hill."
+    },
+    {
+      "word": "night",
+      "tip": "The time when the sun is not visible."
+    },
+    {
+      "word": "ocean",
+      "tip": "A large body of water, covering most of the earth."
+    },
+    {
+      "word": "pencil",
+      "tip": "A tool used to write or draw, often with a wooden casing."
+    },
+    {
+      "word": "queen",
+      "tip": "A female ruler, often seen in stories and history."
+    },
+    {
+      "word": "rainbow",
+      "tip": "A colorful arc in the sky, often after rain."
+    },
+    {
+      "word": "sun",
+      "tip": "The star that provides light during the day."
+    },
+    {
+      "word": "tree",
+      "tip": "A tall plant with branches, often found in forests."
+    },
+    {
+      "word": "umbrella",
+      "tip": "An item used to shield oneself from rain."
+    },
+    {
+      "word": "vampire",
+      "tip": "A creature that is often associated with night."
+    },
+    {
+      "word": "waterfall",
+      "tip": "A feature where water drops over a cliff."
+    },
+    {
+      "word": "xylophone",
+      "tip": "A musical instrument with wooden bars that are struck."
+    },
+    {
+      "word": "yellow",
+      "tip": "A color that resembles ripe bananas."
+    },
+    {
+      "word": "zebra",
+      "tip": "An animal with black and white stripes, found in Africa."
+    },
+    {
+      "word": "car",
+      "tip": "A vehicle with four wheels, used for transport."
+    },
+    {
+      "word": "desk",
+      "tip": "A piece of furniture often used for working or writing."
+    },
+    {
+      "word": "egg",
+      "tip": "An object commonly associated with birds."
+    },
+    {
+      "word": "fan",
+      "tip": "A device used to circulate air."
+    },
+    {
+      "word": "grape",
+      "tip": "A small, round fruit, often eaten in bunches."
+    },
+    {
+      "word": "hat",
+      "tip": "An item worn on the head, often for fashion or protection."
+    },
+    {
+      "word": "ice",
+      "tip": "Frozen water, often used in drinks."
+    },
+    {
+      "word": "juice",
+      "tip": "A drink made from squeezing fruits or vegetables."
+    },
+    {
+      "word": "key",
+      "tip": "An object used to unlock something."
+    },
+    {
+      "word": "lamp",
+      "tip": "A light source, often placed on a table."
+    },
+    {
+      "word": "moon",
+      "tip": "An object that orbits Earth, visible at night."
+    },
+    {
+      "word": "notebook",
+      "tip": "A book for writing, usually with lined pages."
+    },
+    {
+      "word": "orange",
+      "tip": "A citrus fruit, often round and juicy."
+    },
+    {
+      "word": "pen",
+      "tip": "A tool for writing, often filled with ink."
+    },
+    {
+      "word": "queen",
+      "tip": "A woman who rules a country or kingdom."
+    },
+    {
+      "word": "robot",
+      "tip": "A machine designed to perform tasks automatically."
+    },
+    {
+      "word": "snow",
+      "tip": "Frozen water that falls from the sky in cold weather."
+    },
+    {
+      "word": "tiger",
+      "tip": "A large cat, known for its distinctive stripes."
+    },
+    {
+      "word": "unicorn",
+      "tip": "A mythical horse-like creature with a single horn."
+    },
+    {
+      "word": "vulture",
+      "tip": "A bird known for scavenging on animal carcasses."
+    },
+    {
+      "word": "whale",
+      "tip": "A large marine mammal, often found in oceans."
+    },
+    {
+      "word": "xmas",
+      "tip": "A common abbreviation for a major holiday."
+    },
+    {
+      "word": "yawn",
+      "tip": "A reflex action often associated with tiredness."
+    },
+    {
+        "word": "ant",
+        "tip": "A small insect, often found in large groups."
+    },
+    {
+        "word": "ball",
+        "tip": "A round object used in many sports."
+    },
+    {
+        "word": "cat",
+        "tip": "A common household pet, known for its independence."
+    },
+    {
+        "word": "dog",
+        "tip": "A loyal companion, often called man's best friend."
+    },
+    {
+        "word": "elephant",
+        "tip": "A large animal with tusks, often found in Africa."
+    },
+    {
+        "word": "fish",
+        "tip": "An aquatic creature, often seen swimming in water."
+    },
+    {
+        "word": "grass",
+        "tip": "A green plant that covers many landscapes."
+    },
+    {
+        "word": "house",
+        "tip": "A structure people live in, often with rooms and a roof."
+    },
+    {
+        "word": "ink",
+        "tip": "A liquid used in pens and printers."
+    },
+    {
+        "word": "jacket",
+        "tip": "A type of clothing worn to keep warm."
+    },
+    {
+        "word": "kite",
+        "tip": "A lightweight object flown in the air on a string."
+    },
+    {
+        "word": "lemon",
+        "tip": "A sour, yellow fruit often used in drinks."
+    },
+    {
+        "word": "moon",
+        "tip": "A celestial body that orbits Earth."
+    },
+    {
+        "word": "nurse",
+        "tip": "A professional who takes care of patients."
+    },
+    {
+        "word": "orange",
+        "tip": "A fruit and a color, often associated with sunsets."
+    },
+    {
+        "word": "pencil",
+        "tip": "A tool used for writing or drawing, often sharpened."
+    },
+    {
+        "word": "quilt",
+        "tip": "A warm, layered blanket, often made of patchwork."
+    },
+    {
+        "word": "rain",
+        "tip": "Precipitation that falls from the sky in droplets."
+    },
+    {
+        "word": "sun",
+        "tip": "The star that provides warmth and light to the Earth."
+    },
+    {
+        "word": "tree",
+        "tip": "A tall plant with leaves and branches, often found in forests."
+    },
+    {
+        "word": "umbrella",
+        "tip": "A tool used to shield from rain or sun."
+    },
+    {
+        "word": "vase",
+        "tip": "A container used for holding flowers."
+    },
+    {
+        "word": "water",
+        "tip": "A colorless liquid essential for life."
+    },
+    {
+        "word": "xylophone",
+        "tip": "A musical instrument with wooden bars that produce sound."
+    },
+    {
+        "word": "yellow",
+        "tip": "A bright color often associated with happiness."
+    },
+    {
+        "word": "zebra",
+        "tip": "A black-and-white striped animal found in Africa."
+    },
+    {
+        "word": "airport",
+        "tip": "A place where airplanes land and take off."
+    },
+    {
+        "word": "balloon",
+        "tip": "A lightweight object that floats when filled with gas."
+    },
+    {
+        "word": "candle",
+        "tip": "A wax object that produces light when lit."
+    },
+    {
+        "word": "drawer",
+        "tip": "A piece of furniture used to store items."
+    },
+    {
+        "word": "elephant",
+        "tip": "A large mammal with big ears, native to Asia and Africa."
+    },
+    {
+        "word": "fish",
+        "tip": "An aquatic creature that lives in oceans and rivers."
+    },
+    {
+        "word": "grape",
+        "tip": "A small, round fruit that grows in clusters."
+    },
+    {
+        "word": "hippopotamus",
+        "tip": "A large, mostly herbivorous mammal found in Africa."
+    },
+    {
+        "word": "ice",
+        "tip": "Frozen water, often used to cool drinks."
+    },
+    {
+        "word": "jungle",
+        "tip": "A dense, tropical forest."
+    },
+    {
+        "word": "kangaroo",
+        "tip": "A large marsupial found in Australia."
+    },
+    {
+        "word": "lighthouse",
+        "tip": "A tower that helps ships navigate at sea."
+    },
+    {
+        "word": "mountain",
+        "tip": "A large natural elevation of the Earth's surface."
+    },
+    {
+        "word": "nest",
+        "tip": "A structure built by birds to hold their eggs."
+    },
+    {
+        "word": "octopus",
+        "tip": "A sea creature with eight arms."
+    },
+    {
+        "word": "penguin",
+        "tip": "A flightless bird that lives in cold climates."
+    },
+    {
+        "word": "queen",
+        "tip": "A female monarch who rules a kingdom."
+    },
+    {
+        "word": "robot",
+        "tip": "A machine designed to perform tasks automatically."
+    },
+    {
+        "word": "snake",
+        "tip": "A long, legless reptile."
+    },
+    {
+        "word": "tiger",
+        "tip": "A big cat with stripes, native to Asia."
+    },
+    {
+        "word": "umbrella",
+        "tip": "A foldable object used for protection against rain."
+    },
+    {
+        "word": "vampire",
+        "tip": "A mythical creature that feeds on blood."
+    },
+    {
+        "word": "whale",
+        "tip": "A large marine mammal that lives in the ocean."
+    },
+    {
+        "word": "xmas",
+        "tip": "An abbreviation for a popular holiday."
+    },
+    {
+        "word": "yarn",
+        "tip": "A thread used for knitting or crocheting."
+    },
+    {
+        "word": "zebra",
+        "tip": "An animal known for its black-and-white stripes."
+    },
+    {
+        "word": "apple",
+        "tip": "A popular fruit, often red or green, eaten raw."
+    },
+    {
+        "word": "banana",
+        "tip": "A long yellow fruit, often eaten as a snack."
+    },
+    {
+        "word": "chocolate",
+        "tip": "A sweet treat often enjoyed on special occasions."
+    },
+    {
+        "word": "door",
+        "tip": "A movable barrier that allows entry into a room."
+    },
+    {
+        "word": "elephant",
+        "tip": "A large mammal with a trunk, often seen at zoos."
+    },
+    {
+        "word": "fox",
+        "tip": "A small carnivorous animal, known for its bushy tail."
+    },
+    {
+        "word": "guitar",
+        "tip": "A stringed instrument, often played by strumming."
+    },
+    {
+        "word": "hat",
+        "tip": "A headpiece worn for fashion or protection from the sun."
+    },
+    {
+        "word": "island",
+        "tip": "A piece of land surrounded by water."
+    },
+    {
+        "word": "jacket",
+        "tip": "A warm outer garment, often worn in colder weather."
+    },
+    {
+        "word": "kite",
+        "tip": "A lightweight object flown in the air, typically on a windy day."
+    },
+    {
+        "word": "lemon",
+        "tip": "A sour fruit, often used to add flavor to food or drinks."
+    },
+    {
+        "word": "mountain",
+        "tip": "A large natural elevation of the Earth's surface, often with snow."
+    },
+    {
+        "word": "notebook",
+        "tip": "A small book used for writing or drawing."
+    },
+    {
+        "word": "orange",
+        "tip": "A citrus fruit that is round and usually orange."
+    },
+    {
+        "word": "piano",
+        "tip": "A musical instrument with black and white keys."
+    },
+    {
+        "word": "queen",
+        "tip": "A female ruler of a country or region."
+    },
+    {
+        "word": "robot",
+        "tip": "A machine designed to carry out tasks automatically."
+    },
+    {
+        "word": "sunflower",
+        "tip": "A tall yellow flower that turns towards the sun."
+    },
+    {
+        "word": "tree",
+        "tip": "A woody plant, often providing shade and oxygen."
+    },
+    {
+        "word": "umbrella",
+        "tip": "A device used to protect you from rain."
+    },
+    {
+        "word": "violet",
+        "tip": "A small, purple flower often found in gardens."
+    },
+    {
+        "word": "whale",
+        "tip": "A marine mammal known for its size and swimming in oceans."
+    },
+    {
+        "word": "xylophone",
+        "tip": "A musical instrument with wooden bars that you strike with mallets."
+    },
+    {
+        "word": "yellow",
+        "tip": "A bright color often associated with the sun."
+    },
+    {
+        "word": "zebra",
+        "tip": "A striped animal often found in Africa."
+    },
+    {
+        "word": "airplane",
+        "tip": "A flying vehicle that carries passengers and cargo."
+    },
+    {
+        "word": "bicycle",
+        "tip": "A two-wheeled vehicle powered by pedaling."
+    },
+    {
+        "word": "cat",
+        "tip": "A common pet with whiskers and a tail."
+    },
+    {
+        "word": "dog",
+        "tip": "A loyal companion, often kept as a pet."
+    },
+    {
+        "word": "elephant",
+        "tip": "A massive mammal with tusks, native to Africa and Asia."
+    },
+    {
+        "word": "fish",
+        "tip": "An aquatic animal with fins and scales."
+    },
+    {
+        "word": "guitar",
+        "tip": "A stringed instrument played with fingers or a pick."
+    },
+    {
+        "word": "heart",
+        "tip": "An organ in your chest that pumps blood."
+    },
+    {
+        "word": "ice",
+        "tip": "Frozen water, often used in drinks."
+    },
+    {
+        "word": "jungle",
+        "tip": "A dense, tropical forest."
+    },
+    {
+        "word": "kiwi",
+        "tip": "A small, brown fruit with bright green inside."
+    },
+    {
+        "word": "lemonade",
+        "tip": "A refreshing drink made from lemons and water."
+    },
+    {
+        "word": "moon",
+        "tip": "The celestial body that orbits the Earth."
+    },
+    {
+        "word": "night",
+        "tip": "The time of day when the sun is below the horizon."
+    },
+    {
+        "word": "octopus",
+        "tip": "A marine creature with eight legs and a soft body."
+    },
+    {
+        "word": "pencil",
+        "tip": "A writing instrument with a wooden body and lead core."
+    },
+    {
+        "word": "quilt",
+        "tip": "A warm blanket made from fabric squares."
+    },
+    {
+        "word": "rose",
+        "tip": "A fragrant flower that comes in many colors."
+    },
+    {
+        "word": "snow",
+        "tip": "Frozen water that falls from the sky as flakes."
+    },
+    {
+        "word": "train",
+        "tip": "A vehicle that runs on tracks and carries passengers or goods."
+    },
+    {
+        "word": "umbrella",
+        "tip": "A device used to shield you from rain or the sun."
+    },
+    {
+        "word": "vampire",
+        "tip": "A mythical creature that drinks blood."
+    },
+    {
+        "word": "wind",
+        "tip": "The movement of air, often felt outside."
+    },
+    {
+        "word": "xmas",
+        "tip": "An abbreviation for the holiday that celebrates the birth of Jesus."
+    },
+    {
+        "word": "yarn",
+        "tip": "A thread used for knitting or crocheting."
+    },
+    {
+        "word": "zoo",
+        "tip": "A place where animals are kept and displayed to the public."
+    }
+]
+    
+
