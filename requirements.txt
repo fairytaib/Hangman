@@ -1,1 +1,3 @@
 # Your requirements go here
+Ich hatte Probleme Random Word APIs und Dictonary APIs zu verbinden, weil manchmal das Wort nicht vorhanden im Dictonary.
+Also entschlossen meine eigene Liste zu schreiben

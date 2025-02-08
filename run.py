@@ -2,6 +2,12 @@
 import json
 import random
 from time import sleep
+import colorama
+
+#Initialize Colorama
+colorama.init()
+
+
 
 class Player:
     def __init__(self, name, health):
