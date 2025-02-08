@@ -10,10 +10,8 @@ from colorama import Fore, Back, Style
 #import simple_term_menu for menu options
 from simple_term_menu import TerminalMenu
 
-
 #Initialize Colorama
 colorama.init(autoreset=True)
-
 
 
 class Player:
@@ -28,6 +26,10 @@ guessedIncorrectLetters = []
 #Get Random Instace for Word and Tip
 randomInstance = random.randint(0,150)
 
+
+
+
+
 def fetchWord(file):
         """Fetch a random word"""
         word = file[randomInstance]["word"].lower()
@@ -40,11 +42,11 @@ def fetchTip(file):
 
 def fetchLanguageFilePath(language):
     """Fetch correct file path corresponding to chosen language"""
-    if language == "de":
+    if language == "German":
         filePath = "assets/json/de-words.json"
         print("Du hast Deutsch gewählt\n")
         return filePath
-    elif language == "du":
+    elif language == "Dutch":
         filePath = "assets/json/du-words.json"
         print("Je hebt Nederlands gekozen\n")
         return filePath
@@ -60,14 +62,18 @@ def fetchFile(filePath):
 
 def letPlayerChooseLanguage():
     """Let user choose his language to play in"""
-    print("\nYou can chosse between different languages to play in.")
-    language = input("Write 'de' for german, 'du' for dutch. Just english just press Enter: ")
+    #Create Menu for Language selection
+    languageOptions = ["English", "German", "Dutch", "Quit"]
+    languageMenu = TerminalMenu(languageOptions)
+    #Catch Index of User input
+    index = languageMenu.show()
+    
+    #Catch if user press ESC or option 'Quit'
+    if languageOptions[index] == None or languageOptions[index] == 3:
+        quit()
 
-    if language == "de" or language == "du" or language == "":
-        return language
-    else:
-        print("Please select a language or press enter")
-        return letPlayerChooseLanguage()
+    return languageOptions[index]
+    
 
 def letPlayerGuessLetter(file):
     """Let the player enter a guessed letter"""

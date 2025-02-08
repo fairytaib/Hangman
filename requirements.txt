@@ -1,3 +1,6 @@
 # Your requirements go here
 Ich hatte Probleme Random Word APIs und Dictonary APIs zu verbinden, weil manchmal das Wort nicht vorhanden im Dictonary.
 Also entschlossen meine eigene Liste zu schreiben
+tutorial simple term menu: https://www.youtube.com/watch?v=Zpa-rc9e388
+
+colorama : https://www.youtube.com/watch?v=u51Zjlnui4Y&t=77s
