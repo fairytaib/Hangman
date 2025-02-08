@@ -28,7 +28,8 @@ guessedIncorrectLetters = []
 randomInstance = random.randint(0,150)
 # Check if it is the first round
 PLAYEREXISTS = False
-
+# Keeps track if the Tip was bought already
+BOUGHTTIP = False
 
 def fetchWord(file):
         """Fetch a random word"""
@@ -78,7 +79,8 @@ def letPlayerChooseLanguage():
     
 def letPlayerGuessLetter(file, player):
     """Let the player enter a guessed letter"""
-    if player.health > 1:
+    global BOUGHTTIP
+    if player.health > 1 and BOUGHTTIP:
         print("Guess one letter. Type 'tip' to buy a tip for one of your health points or write 'quit' to exit the game")
     else:
         print("Guess one letter. Write 'quit' to exit the game")
@@ -88,19 +90,22 @@ def letPlayerGuessLetter(file, player):
     if not guess.isalpha():
         print("Only letters are allowed")
         sleep(2)
-        return letPlayerGuessLetter(file)
+        return letPlayerGuessLetter(file, player)
     if guess == "tip":
         help = fetchTip(file)
+        print(f"You have now {player.health} trys left")
+        player.health -= 1
+        BOUGHTTIP = False
         print(help)
         sleep(2)
-        return letPlayerGuessLetter(file)
+        return letPlayerGuessLetter(file,player)
     if guess == "quit":
         quit()
 
     if len(guess) > 1:
         print("You can guess only one letter")
         sleep(2)
-        return letPlayerGuessLetter(file)
+        return letPlayerGuessLetter(file, player)
     else:
         return guess
 
@@ -142,24 +147,26 @@ def fetchCustomDifficulty():
                       ),
     ]
     chosenDifficulty = inquirer.prompt(difficultyOptions)
+    print(chosenDifficulty)
 
-    match chosenDifficulty:
-        case "Easy":
-            return 12
-        case "Medium":
-            return 8
-        case "Hard":
-            return 4
-        case "Impossible":
-            return 1
-        case "Leave Game":
-            print("Goodbye")
-            quit()
+    if chosenDifficulty["difficulty"] == "Easy":
+        return 12
+    elif chosenDifficulty["difficulty"] == "Medium":
+        return 8
+    elif chosenDifficulty["difficulty"] == "Hard":
+        return 4
+    elif chosenDifficulty["difficulty"] == "Impossible":
+        return 1
+    elif chosenDifficulty["difficulty"] == "Leave Game":
+        print("Goodbye")
+        quit()
   
 def createPlayer(playerName, playerDifficulty):
     """Create new Player instance"""
     global PLAYEREXISTS
     newPlayer = Player(playerName, playerDifficulty)
+    print("This is new Player")
+    print(newPlayer)
     PLAYEREXISTS = True
     return newPlayer
 
@@ -268,7 +275,6 @@ def resetPlayerHealth(difficulty, player):
     player.health = difficulty
     
 
-
 def main():
     resetGlobalVariables()
     printTutorial()
@@ -283,10 +289,10 @@ def main():
     file = fetchFile(filePath)
     playerHealth = fetchCustomDifficulty()
     # Skip function if User already exists
-    if PLAYEREXISTS:
-        resetPlayerHealth(playerHealth, player)
-    else:
+    if not PLAYEREXISTS:
         player = createPlayer(playerName, playerHealth)
+    else:
+        resetPlayerHealth(playerHealth, player)
     word = fetchWord(file)
     print(word) #REMOVE LATER!!!!!!!!!!!!!!!!!!!!!!!!!!!
     while True:
