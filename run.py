@@ -147,7 +147,6 @@ def fetchCustomDifficulty():
                       ),
     ]
     chosenDifficulty = inquirer.prompt(difficultyOptions)
-    print(chosenDifficulty)
 
     if chosenDifficulty["difficulty"] == "Easy":
         return 12
@@ -165,8 +164,6 @@ def createPlayer(playerName, playerDifficulty):
     """Create new Player instance"""
     global PLAYEREXISTS
     newPlayer = Player(playerName, playerDifficulty)
-    print("This is new Player")
-    print(newPlayer)
     PLAYEREXISTS = True
     return newPlayer
 
@@ -240,7 +237,7 @@ def askForAnotherRound():
                       ),
     ]
     chosenMenu = inquirer.prompt(menuOptions)
-    return chosenMenu
+    return chosenMenu["menu"]
         
 def checkForGameEnd(player, word, correctGuesses):
     """Checks if the player did win or lose yet"""
