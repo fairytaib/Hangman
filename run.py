@@ -7,8 +7,8 @@ from time import sleep
 #import Colorama for colors
 import colorama
 from colorama import Fore, Back, Style
-#import python Inquirer for menu options
-from PyInquirer import prompt
+#import Terminal Oprion Library
+import inquirer
 
 
 #Initialize Colorama
@@ -63,18 +63,15 @@ def fetchFile(filePath):
 
 def letPlayerChooseLanguage():
     """Let user choose his language to play in"""
-    options = [
-        {
-            'type': 'list',
-            'name': 'language',
-            'message': 'Choose your language to play in',
-            'choices': ['English', 'German', 'Dutch', 'Quit'],
-        }
+    languageOptions = [
+        inquirer.List('language',
+                      message="Choose your language to play in",
+                      choices=["English", "German", "Dutch", "Quit"],
+                      ),
     ]
-
-    chosenLanguage = prompt(options)
-
-    if chosenLanguage["language"] == "Quit":
+    chosenLanguage = inquirer.prompt(languageOptions)
+    
+    if chosenLanguage['language'] == "Quit":
         quit()
 
     return chosenLanguage
