@@ -107,7 +107,7 @@ def letPlayerGuessLetter(file, player):
 def printTutorial():
     """Write a tutorial to display at the start of the game"""
 
-    print("\nWelcome to Hangman\n")
+    print("\nWelcome to Hangman!\n")
     print("How to play:\n")
     print("A secret word is chosen. Each underscore represents one secret letter.")
     print("Guess one letter at a time. If the letter is in the word, its position(s) will be reveal.")
@@ -120,7 +120,7 @@ def fetchPlayerName():
     """Let the user name himself for a more immersiv experience"""
     name = input("Enter your Name to start the game or 'q' to end programm: ").capitalize()
     if not name.isalpha():
-        print("Please enter only letters and no whitespace\n")
+        print("Please enter only letters and no whitespace.\n")
         return fetchPlayerName()
     elif name == "Q":
         print("Goodbye")
@@ -130,11 +130,11 @@ def fetchPlayerName():
 
 def fetchCustomDifficulty():
     """Let the user decide how many guesses he wants to have"""
-    print("You can choose a custom difficulty. The harder you want the game to be, the less trys you will have\n")
+    print("You can choose a custom difficulty. The harder you want the game to be, the less trys you will have.\n")
     print("Easy = 12 wrong guesses")
     print("Medium = 8 wrong guesses")
     print("Hard = 4 wrong guesses")
-    print("Impossible = One wrong guess and you lose")
+    print("Impossible = One wrong guess and you lose\n")
     difficultyOptions = [
         inquirer.List('difficulty',
                       message="Choose your difficulty",
@@ -283,7 +283,7 @@ def main():
     file = fetchFile(filePath)
     playerHealth = fetchCustomDifficulty()
     # Skip function if User already exists
-    if playerName:
+    if PLAYEREXISTS:
         resetPlayerHealth(playerHealth, player)
     else:
         player = createPlayer(playerName, playerHealth)
