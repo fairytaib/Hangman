@@ -7,8 +7,10 @@ from time import sleep
 #import Colorama for colors
 import colorama
 from colorama import Fore, Back, Style
-#import simple_term_menu for menu options
-from simple_term_menu import TerminalMenu
+#import python Inquirer for menu options
+from __future__ import print_function, unicode_literals
+from PyInquirer import prompt, print_json
+
 
 #Initialize Colorama
 colorama.init(autoreset=True)
