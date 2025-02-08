@@ -284,7 +284,7 @@ def main():
     else:
         player = createPlayer(playerName, playerHealth)
     word = fetchWord(file)
-    print(word)
+    print(word) #REMOVE LATER!!!!!!!!!!!!!!!!!!!!!!!!!!!
     while True:
         sleep(1)
         displayLetterCount(word, guessedCorrectLetters)
