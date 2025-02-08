@@ -8,8 +8,7 @@ from time import sleep
 import colorama
 from colorama import Fore, Back, Style
 #import python Inquirer for menu options
-from __future__ import print_function, unicode_literals
-from PyInquirer import prompt, print_json
+from PyInquirer import prompt
 
 
 #Initialize Colorama
@@ -64,17 +63,21 @@ def fetchFile(filePath):
 
 def letPlayerChooseLanguage():
     """Let user choose his language to play in"""
-    #Create Menu for Language selection
-    languageOptions = ["English", "German", "Dutch", "Quit"]
-    languageMenu = TerminalMenu(languageOptions)
-    #Catch Index of User input
-    index = languageMenu.show()
-    
-    #Catch if user press ESC or option 'Quit'
-    if languageOptions[index] == None or languageOptions[index] == 3:
+    options = [
+        {
+            'type': 'list',
+            'name': 'language',
+            'message': 'Choose your language to play in',
+            'choices': ['English', 'German', 'Dutch', 'Quit'],
+        }
+    ]
+
+    chosenLanguage = prompt(options)
+
+    if chosenLanguage["language"] == "Quit":
         quit()
 
-    return languageOptions[index]
+    return chosenLanguage
     
 
 def letPlayerGuessLetter(file):
