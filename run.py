@@ -126,18 +126,18 @@ def letPlayerGuessLetter(file, player):
 def printWelcomeMessage():
     """Print Welcome Message"""
     #Seperated from tutorial message to call tutorial on different places of the game
-    print("\nWelcome to Hangman!\n")
+    print(Fore.CYAN +"\nWelcome to Hangman!\n")
 
 def printTutorial():
     """Write a tutorial to display at the start of the game"""
 
-    print("How to play:\n")
-    print("A secret word is chosen. Each underscore represents one secret letter.")
-    print("Guess one letter at a time. If the letter is in the word, its position(s) will be reveal.")
-    print("If the letter is incorrect, you lose one of your guess chances.")
-    print("If you need help, write 'help' to get a tip.")
-    print("Win: All letters are revealed.")
-    print("Lose: The full hangman drawing is finished before the word is guessed.\n")
+    print(Fore.YELLOW + "How to play:\n")
+    print(Fore.GREEN + "A secret word is chosen. Each underscore represents one secret letter.")
+    print(Fore.GREEN + "Guess one letter at a time. If the letter is in the word, its position(s) will be reveal.")
+    print(Fore.GREEN + "If the letter is incorrect, you lose one of your guess chances.")
+    print(Fore.GREEN + "If you need help, write 'help' to get a tip.")
+    print(Fore.GREEN + "Win: All letters are revealed.")
+    print(Fore.RED + "Lose: The full hangman drawing is finished before the word is guessed.\n")
 
 def fetchPlayerName():
     """Let the user name himself for a more immersiv experience"""
@@ -154,10 +154,10 @@ def fetchPlayerName():
 def fetchCustomDifficulty():
     """Let the user decide how many guesses he wants to have"""
     print("You can choose a custom difficulty. The harder you want the game to be, the less trys you will have.\n")
-    print("Easy = 12 wrong guesses")
-    print("Medium = 8 wrong guesses")
-    print("Hard = 4 wrong guesses")
-    print("Impossible = One wrong guess and you lose\n")
+    print(Fore.GREEN + "Easy = 12 wrong guesses")
+    print(Fore.YELLOW + "Medium = 8 wrong guesses")
+    print(Fore.ORANGE + "Hard = 4 wrong guesses")
+    print(Fore.RED + "Impossible = One wrong guess and you lose\n")
 
     global TIPAVAILABLE
 
@@ -206,12 +206,12 @@ def displayAlreadyGuessedLetters(wrongLetters):
     """Display the already guessed Letters after each guess"""
     if wrongLetters:
         wrongLetterList = ", ".join(wrongLetters)
-        print(f"You already guessed: {wrongLetterList}")
+        print("You already guessed:" + Fore.RED +  f"{wrongLetterList}")
 
 def checkForAlreadyGuessedLetter(guess, correctGuesses, incorrectGuesses, file, player):
     """Check the guess of the user and remind him of already guessed letters"""
     if guess in correctGuesses or guess in incorrectGuesses:
-        print("You already guessed that letter. Try again")
+        print(Fore.YELLOW + "You already guessed that letter. Try again")
         return letPlayerGuessLetter(file, player)
     else:
         return guess
@@ -243,10 +243,10 @@ def appendLetterIntoList(letterValidation, guess):
 def displayGuessConfirmation(guessletterValidation, player):
     """Display to the User if his guess was correct or incorrect"""
     if guessletterValidation:
-        print("You guessed correct!")
+        print(Fore.GREEN + "You guessed correct!")
     else:
         if player.health > 1:
-            print(f"Incorrect. You have {player.health} trys left")
+            print(Fore.RED + f"Incorrect. You have {player.health} trys left")
         else:
             return
         
@@ -275,9 +275,9 @@ def endGame(choice):
 def displayGameOver(player, word):
     """Display an individual message depending in the loss or win of the player"""
     if player.health == 0:
-        print(f"You lost! The word would have been '{word}'.")
+        print(Fore.RED + f"You lost! The word would have been '{word}'.")
     else:
-        print(f"You won and you still had {player.health} trys left. Good job")
+        print(Fore.GREEN + f"You won and you still had {player.health} trys left. Good job")
 
 def resetGlobalVariables():
     """Reset global Variables such as guessed Letters and so on"""
