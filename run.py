@@ -188,11 +188,11 @@ def displayAlreadyGuessedLetters(wrongLetters):
         wrongLetterList = ", ".join(wrongLetters)
         print(f"You already guessed: {wrongLetterList}")
 
-def checkForAlreadyGuessedLetter(guess, correctGuesses, incorrectGuesses, file):
+def checkForAlreadyGuessedLetter(guess, correctGuesses, incorrectGuesses, file, player):
     """Check the guess of the user and remind him of already guessed letters"""
     if guess in correctGuesses or guess in incorrectGuesses:
         print("You already guessed that letter. Try again")
-        return letPlayerGuessLetter(file)
+        return letPlayerGuessLetter(file, player)
     else:
         return guess
 
@@ -302,7 +302,7 @@ def main():
             displayAlreadyGuessedLetters(guessedIncorrectLetters)
         sleep(1)
         guess = letPlayerGuessLetter(file, player)
-        checkForAlreadyGuessedLetter(guess, guessedCorrectLetters, guessedIncorrectLetters, file)
+        checkForAlreadyGuessedLetter(guess, guessedCorrectLetters, guessedIncorrectLetters, file, player)
         letterValidation = checkIfAnwserIsCorrect(guess, word)
         reducePlayerHealth(letterValidation, player)
         displayGuessConfirmation(letterValidation, player)
