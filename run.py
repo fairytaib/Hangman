@@ -77,20 +77,20 @@ def letPlayerChooseLanguage():
     """Let user choose his language to play in"""
     languageOptions = [
         inquirer.List('language',
-                      message="Choose the words language",
-                      choices=["English",
-                               "German",
-                               "Dutch",
-                               "Display Rules again",
-                               "Quit"]
+                      message=Fore.CYAN + "Choose the words language",
+                      choices=[Fore.YELLOW + "English",
+                               Fore.YELLOW + "German",
+                               Fore.YELLOW + "Dutch",
+                               Fore.YELLOW + "Display Rules again",
+                               Fore.RED + "Quit"]
                       ),
     ]
     chosenLanguage = inquirer.prompt(languageOptions)
 
-    if chosenLanguage['language'] == "Quit":
+    if chosenLanguage['language'] == Fore.RED + "Quit":
         print("\nGoodbye")
         quit()
-    elif chosenLanguage['language'] == "Display Rules again":
+    elif chosenLanguage['language'] == Fore.YELLOW + "Display Rules again":
         printTutorial()
         sleep(2)
         return letPlayerChooseLanguage()
@@ -186,7 +186,7 @@ def fetchCustomDifficulty():
 
     difficultyOptions = [
         inquirer.List('difficulty',
-                      message="Choose your difficulty",
+                      message=Fore.CYAN + "Choose your difficulty",
                       choices=[Fore.GREEN + "Easy",
                                Fore.YELLOW + "Medium",
                                Fore.MAGENTA + "Hard",
@@ -196,16 +196,16 @@ def fetchCustomDifficulty():
     ]
     chosenDifficulty = inquirer.prompt(difficultyOptions)
 
-    if chosenDifficulty["difficulty"] == "Easy":
+    if chosenDifficulty["difficulty"] == Fore.GREEN + "Easy":
         return 12
-    elif chosenDifficulty["difficulty"] == "Medium":
+    elif chosenDifficulty["difficulty"] == Fore.YELLOW + "Medium":
         return 8
-    elif chosenDifficulty["difficulty"] == "Hard":
+    elif chosenDifficulty["difficulty"] == Fore.MAGENTA + "Hard":
         return 4
-    elif chosenDifficulty["difficulty"] == "Impossible":
+    elif chosenDifficulty["difficulty"] == Fore.RED + "Impossible":
         TIPAVAILABLE = False
         return 1
-    elif chosenDifficulty["difficulty"] == "Leave Game":
+    elif chosenDifficulty["difficulty"] == Fore.CYAN + "Leave Game":
         print(Fore.CYAN + "Goodbye")
         quit()
 
