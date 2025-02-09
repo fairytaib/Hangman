@@ -196,4 +196,26 @@ To deploy the project via GitHub Pages:
     ![Val](./readme-images/validation/ci-python-validator.png)
 - Libraries: Verified that all used libraries (such as colorama, inquirer, and json) are correctly installed and function properly.
 
+## Bugs Encountered, Solutions, and General Observations
+
+### Bugs Encountered
+During the development of Hangman, several challenges and bugs were encountered. Below is a summary of the most significant ones:
+
+- Issues with External APIs:
+    - **Problem:** Difficulty integrating with external Random Word APIs and Dictionary APIs due to inconsistencies in data. Some words returned by the Random Word API were not found in the Dictionary API, causing errors.
+    - **Solution:** Opted to create a custom word list stored locally in a JSON file. This ensured consistency and control over the word selection process.
+
+- Cross-Platform Compatibility:
+    - **Problem:** The simple-term-menu library, which was initially considered for creating interactive menus, proved to be incompatible with the Windows operating system.
+    - **Solution:** Implemented the inquirer library as an alternative for creating interactive menus. This library provided cross-platform compatibility, ensuring that the menus function correctly on Windows as well.
+
+- General Observations
+    - **Data Consistency:** The decision to use a custom word list improved the reliability of the game by ensuring that all words have corresponding definitions and are suitable for the game.
+    - **User Experience:** The use of the colorama library enhanced the user experience by adding color and visual appeal to the game's interface.
+
+## Future Plans
+While Hangman is currently a functional and enjoyable game, there are some avenues for future development that could enhance the gameplay experience. These include:
+    - **More Word Lists:** Expanding the variety of words by adding more word lists, potentially with different themes or categories, would increase replayability.
+    - **Hints and Clues:** Adding more creative and helpful hints or clues for the words would make the game more accessible and enjoyable.
+    - **Thematic Content:** Incorporating thematic content, such as by using words related to a specific topic or adding visual elements that match the theme, could create a more cohesive experience.
 
