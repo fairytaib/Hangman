@@ -99,6 +99,7 @@ def letPlayerGuessLetter(file, player):
         return letPlayerGuessLetter(file, player)
     if guess == "tip" and TIPAVAILABLE:
         help = fetchTip(file)
+        print("You bought a tip")
         print(f"You have now {player.health} trys left")
         player.health -= 1
         TIPAVAILABLE = False
@@ -108,7 +109,7 @@ def letPlayerGuessLetter(file, player):
     #If player has already bought the tip
     elif guess == "tip" and not TIPAVAILABLE and player.health > 1:
         help = fetchTip(file)
-        print(f"You have now {player.health} trys left")
+        print("Here the tip again")
         print(help)
         sleep(2)
         return letPlayerGuessLetter(file,player)
