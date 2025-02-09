@@ -65,7 +65,7 @@ def letPlayerChooseLanguage():
     """Let user choose his language to play in"""
     languageOptions = [
         inquirer.List('language',
-                      message="Choose your language to play in",
+                      message="Choose the words language",
                       choices=["English", "German", "Dutch", "Display Rules again","Quit"],
                       ),
     ]
@@ -314,7 +314,6 @@ def main():
     else:
         resetPlayerHealth(playerHealth, player)
     word = fetchWord(file)
-    print(word) #REMOVE LATER!!!!!!!!!!!!!!!!!!!!!!!!!!!
     while True:
         sleep(1)
         displayLetterCount(word, guessedCorrectLetters)
