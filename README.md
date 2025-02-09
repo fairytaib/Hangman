@@ -129,28 +129,6 @@ The game underwent multiple testing phases to ensure smooth gameplay and accurat
   - Miro: Used for planning and visualizing game structure, creating flowcharts, and collaborating on gameplay mechanics.
   - Balsamiq Wireframe: Used to create low-fidelity wireframes for UI layout and structure before design implementation.
 
-## Technologies Used
-
-- **Languages**:
-  - Python: The core language used to develop the Hangman game, handling game logic, word selection, and user interactions.
-
-- **Version Control**:
-  - Git: Used for version control to track changes and manage the development process.
-  - GitHub: Used as a cloud-based platform to store and share the code repository.
-
-- **Development Tools**:
-  - VS Code: Used as the primary code editor for writing and debugging Python scripts.
-  - Git Bash: Used for executing Git commands and managing version control.
-
-- **Deployment**:
-  - Heroku: Used to deploy the Hangman game as a web application, making it accessible online.
-
-- **Data Handling**:
-  - JSON: Used to store and manage word lists, ensuring flexibility and easy modifications.
-
-- **Planning & Design**:
-  - Miro: Used for organizing ideas, structuring the development workflow, and tracking API testing results.
-
 ## Getting started
 
 ### Prerequisites
@@ -194,5 +172,28 @@ python run.py
 
 Feel free to modify the code or assets to your liking and explore the different features of the game!
 
+### Deployment
+
+To deploy the project via GitHub Pages:
+
+1. Push the repository to your GitHub account.
+2. Go to the repository’s settings and navigate to the **Pages** section.
+3. Select the `main` branch and save changes.
+4. Your game will be live at `https://<your-github-username>.github.io/hangman`.
+
+## Testing and Validation
+
+### Functionality Testing
+
+- **Input Validation:** Ensured that player name input is restricted to letters only and does not allow spaces or special characters.
+- **Language Selection:** Tested the language selection process to ensure that the correct word lists are loaded and the user interface updates accordingly.
+- **Difficulty Selection:** Tested the different difficulty levels to verify that the number of attempts is set correctly and impacts gameplay.
+- **Letter Recognition:** Verified that the game correctly identifies whether a letter is in the word or not and provides appropriate feedback.
+- **Gameplay Flow:** Tested the entire gameplay flow, from word selection and letter guessing to winning or losing the game.
+
+### Code Validation
+- [CI Python Linter:](https://pep8ci.herokuapp.com/) The Python code was checked for syntax errors and other potential issues to ensure that it runs without errors.
+    ![Val](./readme-images/validation/ci-python-validator.png)
+- Libraries: Verified that all used libraries (such as colorama, inquirer, and json) are correctly installed and function properly.
 
 
