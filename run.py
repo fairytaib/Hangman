@@ -88,7 +88,7 @@ def letPlayerChooseLanguage():
     chosenLanguage = inquirer.prompt(languageOptions)
 
     if chosenLanguage['language'] == Fore.RED + "Quit":
-        print("\nGoodbye")
+        print(Fore.CYAN + "\nGoodbye")
         quit()
     elif chosenLanguage['language'] == Fore.YELLOW + "Display Rules again":
         printTutorial()
