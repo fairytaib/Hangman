@@ -158,7 +158,7 @@ def printTutorial():
     print(Fore.GREEN + "If the letter is incorrect, you lose one of your guess chances.")
     print(Fore.GREEN + "If you need help, write 'help' to get a tip.")
     print(Fore.GREEN + "Win: All letters are revealed.")
-    print(Fore.RED + "Lose: The full hangman drawing is finished before the word is guessed.\n")
+    print(Fore.RED + "Lose: When you have no guesses left.\n")
 
 
 def fetchPlayerName():
@@ -222,14 +222,16 @@ def displayLetterCount(word, guessedCorrectLetters):
     """Display the amount of letters the word has as underlines"""
     combinedLetters = []
     if len(guessedCorrectLetters) == 0:
-        print(Fore.GREEN + " ".join(["_" for letter in word]))
+        print(Fore.CYAN + "The Word is:" +
+              Fore.GREEN + " ".join(["_" for letter in word]))
     else:  # Merge guessed Letters and missing letters
         for letter in word:
             if letter in guessedCorrectLetters:
                 combinedLetters.append(letter)
             else:
                 combinedLetters.append("_")
-        print(Fore.GREEN + " ".join(combinedLetters))
+        print(Fore.CYAN + "The Word is:" +
+              Fore.GREEN + " ".join(combinedLetters))
 
 
 def displayAlreadyGuessedLetters(wrongLetters):
