@@ -66,7 +66,7 @@ def letPlayerChooseLanguage():
     languageOptions = [
         inquirer.List('language',
                       message="Choose your language to play in",
-                      choices=["English", "German", "Dutch", "Quit"],
+                      choices=["English", "German", "Dutch", "Display Rules again","Quit"],
                       ),
     ]
     chosenLanguage = inquirer.prompt(languageOptions)
@@ -74,6 +74,10 @@ def letPlayerChooseLanguage():
     if chosenLanguage['language'] == "Quit":
         print("\nGoodbye")
         quit()
+    elif chosenLanguage['language'] == "Display Rules again":
+        printTutorial() 
+        sleep(2)
+        return letPlayerChooseLanguage()
 
     return chosenLanguage
     
