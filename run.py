@@ -27,7 +27,7 @@ randomInstance = random.randint(0,150)
 # Check if it is the first round
 PLAYEREXISTS = False
 # Keeps track if the Tip was bought already
-BOUGHTTIP = False
+TIPAVAILABLE = True
 #Create gobal Player varibale
 player = None
 
@@ -83,9 +83,11 @@ def letPlayerChooseLanguage():
     
 def letPlayerGuessLetter(file, player):
     """Let the player enter a guessed letter"""
-    global BOUGHTTIP
-    if player.health > 1 and BOUGHTTIP:
+    global TIPAVAILABLE
+    if player.health > 1 and TIPAVAILABLE:
         print("Guess one letter. Type 'tip' to buy a tip for one of your health points or write 'quit' to exit the game")
+    elif not TIPAVAILABLE:
+        print("Guess one letter. Type 'tip' to review the tip or write 'quit' to exit the game")
     else:
         print("Guess one letter. Write 'quit' to exit the game")
 
@@ -99,7 +101,7 @@ def letPlayerGuessLetter(file, player):
         help = fetchTip(file)
         print(f"You have now {player.health} trys left")
         player.health -= 1
-        BOUGHTTIP = False
+        TIPAVAILABLE = False
         print(help)
         sleep(2)
         return letPlayerGuessLetter(file,player)
@@ -287,7 +289,7 @@ def main():
     if PLAYEREXISTS:
         pass
     else:
-        printTutorial()
+        printWelcomeMessage()
         printTutorial()
         playerName = fetchPlayerName()
     language = letPlayerChooseLanguage()
