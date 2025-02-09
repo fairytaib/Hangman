@@ -222,7 +222,7 @@ def displayLetterCount(word, guessedCorrectLetters):
     """Display the amount of letters the word has as underlines"""
     combinedLetters = []
     if len(guessedCorrectLetters) == 0:
-        print(Fore.CYAN + "The Word is:" +
+        print(Fore.CYAN + "The Word is: " +
               Fore.GREEN + " ".join(["_" for letter in word]))
     else:  # Merge guessed Letters and missing letters
         for letter in word:
@@ -230,7 +230,7 @@ def displayLetterCount(word, guessedCorrectLetters):
                 combinedLetters.append(letter)
             else:
                 combinedLetters.append("_")
-        print(Fore.CYAN + "The Word is:" +
+        print(Fore.CYAN + "The Word is: " +
               Fore.GREEN + " ".join(combinedLetters))
 
 
