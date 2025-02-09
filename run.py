@@ -86,7 +86,7 @@ def letPlayerGuessLetter(file, player):
     global TIPAVAILABLE
     if player.health > 1 and TIPAVAILABLE:
         print("Guess one letter. Type 'tip' to buy a tip for one of your health points or write 'quit' to exit the game")
-    elif not TIPAVAILABLE:
+    elif not TIPAVAILABLE and  player.health > 1:
         print("Guess one letter. Type 'tip' to review the tip or write 'quit' to exit the game")
     else:
         print("Guess one letter. Write 'quit' to exit the game")
@@ -97,11 +97,18 @@ def letPlayerGuessLetter(file, player):
         print("Only letters are allowed")
         sleep(2)
         return letPlayerGuessLetter(file, player)
-    if guess == "tip":
+    if guess == "tip" and TIPAVAILABLE:
         help = fetchTip(file)
         print(f"You have now {player.health} trys left")
         player.health -= 1
         TIPAVAILABLE = False
+        print(help)
+        sleep(2)
+        return letPlayerGuessLetter(file,player)
+    #If player has already bought the tip
+    elif guess == "tip" and not TIPAVAILABLE and player.health > 1:
+        help = fetchTip(file)
+        print(f"You have now {player.health} trys left")
         print(help)
         sleep(2)
         return letPlayerGuessLetter(file,player)
@@ -150,6 +157,9 @@ def fetchCustomDifficulty():
     print("Medium = 8 wrong guesses")
     print("Hard = 4 wrong guesses")
     print("Impossible = One wrong guess and you lose\n")
+
+    global TIPAVAILABLE
+
     difficultyOptions = [
         inquirer.List('difficulty',
                       message="Choose your difficulty",
@@ -165,6 +175,7 @@ def fetchCustomDifficulty():
     elif chosenDifficulty["difficulty"] == "Hard":
         return 4
     elif chosenDifficulty["difficulty"] == "Impossible":
+        TIPAVAILABLE = False
         return 1
     elif chosenDifficulty["difficulty"] == "Leave Game":
         print("Goodbye")
