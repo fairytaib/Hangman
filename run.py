@@ -310,6 +310,7 @@ def endGame(choice):
     if choice == "Play again":
         main()
     else:
+        print(Fore.CYAN + "\nGoodbye")
         quit()
 
 
