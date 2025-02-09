@@ -319,6 +319,7 @@ def displayGameOver(player, word):
         print(Fore.RED + f"You lost! The word would have been '{word}'.")
     else:
         print(Fore.GREEN + f"You won and you still had {player.health} trys left. Good job")
+        print(Fore.GREEN + f"The word was '{word}'!")
 
 
 def resetGlobalVariables():
