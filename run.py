@@ -179,7 +179,7 @@ def fetchCustomDifficulty():
     print(Fore.CYAN + "You can choose a custom difficulty. The harder you want the game to be, the less trys you will have.\n")
     print(Fore.GREEN + "Easy = 12 wrong guesses")
     print(Fore.YELLOW + "Medium = 8 wrong guesses")
-    print(Fore.ORANGE + "Hard = 4 wrong guesses")
+    print(Fore.MAGENTA + "Hard = 4 wrong guesses")
     print(Fore.RED + "Impossible = One wrong guess and you lose\n")
 
     global TIPAVAILABLE
