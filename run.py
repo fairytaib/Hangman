@@ -79,7 +79,7 @@ def letPlayerChooseLanguage():
         sleep(2)
         return letPlayerChooseLanguage()
 
-    return chosenLanguage
+    return chosenLanguage["language"]
     
 def letPlayerGuessLetter(file, player):
     """Let the player enter a guessed letter"""
