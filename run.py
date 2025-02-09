@@ -238,7 +238,7 @@ def displayAlreadyGuessedLetters(wrongLetters):
     """Display the already guessed Letters after each guess"""
     if wrongLetters:
         wrongLetterList = ", ".join(wrongLetters)
-        print(Fore.CYAN + "You already guessed:" + Fore.RED + f"{wrongLetterList}")
+        print(Fore.CYAN + "You already guessed: " + Fore.RED + f"{wrongLetterList}")
 
 
 def checkForAlreadyGuessedLetter(guess, correctGuesses, incorrectGuesses, file, player):
