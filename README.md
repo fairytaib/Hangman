@@ -215,7 +215,24 @@ During the development of Hangman, several challenges and bugs were encountered.
 
 ## Future Plans
 While Hangman is currently a functional and enjoyable game, there are some avenues for future development that could enhance the gameplay experience. These include:
-    - **More Word Lists:** Expanding the variety of words by adding more word lists, potentially with different themes or categories, would increase replayability.
-    - **Hints and Clues:** Adding more creative and helpful hints or clues for the words would make the game more accessible and enjoyable.
-    - **Thematic Content:** Incorporating thematic content, such as by using words related to a specific topic or adding visual elements that match the theme, could create a more cohesive experience.
+- **More Word Lists:** Expanding the variety of words by adding more word lists, potentially with different themes or categories, would increase replayability.
+- **Hints and Clues:** Adding more creative and helpful hints or clues for the words would make the game more accessible and enjoyable.
+- **Thematic Content:** Incorporating thematic content, such as by using words related to a specific topic or adding visual elements that match the theme, could create a more cohesive experience.
 
+## Credits
+
+**Creative Content**
+- **ChatGpt**: Creating a word and tip list for different languages
+- **Miro**: [Miro](https://miro.com/de/) was my tool to create and visualize my pseudo-code
+
+**Content and Tutorials**
+- **Stack Overflow**: All kinds of different questions and anwsers from [Stack Overflow](https://stackoverflow.com/).
+
+**Code Validation and Development Tools**
+- **W3C**: Code validation conducted using [W3C](https://www.w3.org/).
+- **Git**: Version control handled with [Git](https://git-scm.com/).
+- **GitHub**: Cloud-based platform for storing and sharing code via [GitHub](https://github.com/).
+- **VS Studio Code**: Text editor for coding
+
+**Mentoring and Guidance**
+- **Iuliia Konovalova**: Mentoring and guidance by [Iuliia Konovalova](https://github.com/IuliiaKonovalova).
