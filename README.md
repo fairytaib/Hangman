@@ -151,3 +151,48 @@ The game underwent multiple testing phases to ensure smooth gameplay and accurat
 - **Planning & Design**:
   - Miro: Used for organizing ideas, structuring the development workflow, and tracking API testing results.
 
+## Getting started
+
+### Prerequisites
+
+To run Hangman locally, ensure you have:
+
+Python 3.x installed on your machine.
+The colorama, inquirer, and json libraries installed. You can install them using pip:
+
+```
+pip install colorama inquirer
+```
+
+### Installation
+
+- Clone the repository:
+
+```
+git clone https://github.com/your-username/hangman.git
+```
+
+- Navigate to the project folder:
+```
+cd hangman
+```
+
+- Open the hangman.py file in your preferred text editor or IDE.
+
+### How to Play
+
+- Run the game by executing the hangman.py file:
+```
+python run.py
+```
+
+- Follow the on-screen instructions to:
+    - Enter your name.
+    - Choose a language for the words.
+    - Select a difficulty level.
+    - Guess letters to uncover the hidden word.
+
+Feel free to modify the code or assets to your liking and explore the different features of the game!
+
+
+
