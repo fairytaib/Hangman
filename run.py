@@ -187,7 +187,11 @@ def fetchCustomDifficulty():
     difficultyOptions = [
         inquirer.List('difficulty',
                       message="Choose your difficulty",
-                      choices=["Easy", "Medium", "Hard", "Impossible", "Leave Game"],
+                      choices=[Fore.GREEN + "Easy",
+                               Fore.YELLOW + "Medium",
+                               Fore.MAGENTA + "Hard",
+                               Fore.RED + "Impossible",
+                               Fore.CYAN + "Leave Game"],
                       ),
     ]
     chosenDifficulty = inquirer.prompt(difficultyOptions)
