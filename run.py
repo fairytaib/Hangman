@@ -94,7 +94,7 @@ def letPlayerGuessLetter(file, player):
     guess = input(Fore.CYAN + "Your guess: ").lower()
 
     if not guess.isalpha():
-        print("Only letters are allowed")
+        print(Fore.RED + "Only letters are allowed")
         sleep(2)
         return letPlayerGuessLetter(file, player)
     if guess == "tip" and TIPAVAILABLE:
@@ -141,19 +141,19 @@ def printTutorial():
 
 def fetchPlayerName():
     """Let the user name himself for a more immersiv experience"""
-    name = input("Enter your Name to start the game or 'q' to end programm: ").capitalize()
+    name = input(Fore.CYAN + "Enter your Name to start the game or 'q' to end programm: ").capitalize()
     if not name.isalpha():
-        print("Please enter only letters and no whitespace.\n")
+        print(Fore.RED + "Please enter only letters and no whitespace.\n")
         return fetchPlayerName()
     elif name == "Q":
-        print("Goodbye")
+        print(Fore.CYAN + "Goodbye")
         quit()
     else:
         return name
 
 def fetchCustomDifficulty():
     """Let the user decide how many guesses he wants to have"""
-    print("You can choose a custom difficulty. The harder you want the game to be, the less trys you will have.\n")
+    print(Fore.CYAN + "You can choose a custom difficulty. The harder you want the game to be, the less trys you will have.\n")
     print(Fore.GREEN + "Easy = 12 wrong guesses")
     print(Fore.YELLOW + "Medium = 8 wrong guesses")
     print(Fore.ORANGE + "Hard = 4 wrong guesses")
@@ -179,7 +179,7 @@ def fetchCustomDifficulty():
         TIPAVAILABLE = False
         return 1
     elif chosenDifficulty["difficulty"] == "Leave Game":
-        print("Goodbye")
+        print(Fore.CYAN + "Goodbye")
         quit()
   
 def createPlayer(playerName, playerDifficulty):
@@ -193,20 +193,20 @@ def displayLetterCount(word, guessedCorrectLetters):
     """Display the amount of letters the word has as underlines"""
     combinedLetters = []
     if len(guessedCorrectLetters) == 0:
-        print(" ".join(["_" for letter in word]))
+        print(Fore.GREEN + " ".join(["_" for letter in word]))
     else: #Merge guessed Letters and missing letters
         for letter in word:
             if letter in guessedCorrectLetters:
                 combinedLetters.append(letter)
             else:
                 combinedLetters.append("_")
-        print(" ".join(combinedLetters))
+        print(Fore.GREEN + " ".join(combinedLetters))
 
 def displayAlreadyGuessedLetters(wrongLetters):
     """Display the already guessed Letters after each guess"""
     if wrongLetters:
         wrongLetterList = ", ".join(wrongLetters)
-        print("You already guessed:" + Fore.RED +  f"{wrongLetterList}")
+        print(Fore.CYAN + "You already guessed:" + Fore.RED +  f"{wrongLetterList}")
 
 def checkForAlreadyGuessedLetter(guess, correctGuesses, incorrectGuesses, file, player):
     """Check the guess of the user and remind him of already guessed letters"""
