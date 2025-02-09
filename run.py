@@ -45,15 +45,15 @@ def fetchLanguageFilePath(language):
     """Fetch correct file path corresponding to chosen language"""
     if language == "German":
         filePath = "assets/json/de-words.json"
-        print("Du hast Deutsch gewählt\n")
+        print(Fore.CYAN + "Du hast Deutsch gewählt\n")
         return filePath
     elif language == "Dutch":
         filePath = "assets/json/du-words.json"
-        print("Je hebt Nederlands gekozen\n")
+        print(Fore.CYAN + "Je hebt Nederlands gekozen\n")
         return filePath
     else:
         filePath = "assets/json/en-words.json"
-        print("You chose english\n")
+        print(Fore.CYAN + "You chose english\n")
         return filePath
 
 def fetchFile(filePath):
@@ -85,13 +85,13 @@ def letPlayerGuessLetter(file, player):
     """Let the player enter a guessed letter"""
     global TIPAVAILABLE
     if player.health > 1 and TIPAVAILABLE:
-        print("Guess one letter. Type 'tip' to buy a tip for one of your health points or write 'quit' to exit the game")
+        print(Fore.CYAN + "Guess one letter. Type 'tip' to buy a tip for one of your health points or write 'quit' to exit the game")
     elif not TIPAVAILABLE and  player.health > 1:
-        print("Guess one letter. Type 'tip' to review the tip or write 'quit' to exit the game")
+        print(Fore.CYAN + "Guess one letter. Type 'tip' to review the tip or write 'quit' to exit the game")
     else:
-        print("Guess one letter. Write 'quit' to exit the game")
+        print(Fore.CYAN + "Guess one letter. Write 'quit' to exit the game")
 
-    guess = input("Your guess: ").lower()
+    guess = input(Fore.CYAN + "Your guess: ").lower()
 
     if not guess.isalpha():
         print("Only letters are allowed")
@@ -99,8 +99,8 @@ def letPlayerGuessLetter(file, player):
         return letPlayerGuessLetter(file, player)
     if guess == "tip" and TIPAVAILABLE:
         help = fetchTip(file)
-        print("You bought a tip")
-        print(f"You have now {player.health} trys left")
+        print(Fore.YELLOW + "You bought a tip")
+        print(Fore.YELLOW + f"You have now {player.health} trys left")
         player.health -= 1
         TIPAVAILABLE = False
         print(help)
@@ -109,7 +109,7 @@ def letPlayerGuessLetter(file, player):
     #If player has already bought the tip
     elif guess == "tip" and not TIPAVAILABLE and player.health > 1:
         help = fetchTip(file)
-        print("Here the tip again")
+        print(Fore.YELLOW + "Here the tip again")
         print(help)
         sleep(2)
         return letPlayerGuessLetter(file,player)
@@ -117,7 +117,7 @@ def letPlayerGuessLetter(file, player):
         quit()
 
     if len(guess) > 1:
-        print("You can guess only one letter")
+        print(Fore.RED + "You can guess only one letter")
         sleep(2)
         return letPlayerGuessLetter(file, player)
     else:
