@@ -10,10 +10,8 @@ from colorama import Fore, Back, Style
 #import Terminal Oprion Library
 import inquirer
 
-
 #Initialize Colorama
 colorama.init(autoreset=True)
-
 
 class Player:
     def __init__(self, name, health):
@@ -111,10 +109,14 @@ def letPlayerGuessLetter(file, player):
     else:
         return guess
 
+def printWelcomeMessage():
+    """Print Welcome Message"""
+    #Seperated from tutorial message to call tutorial on different places of the game
+    print("\nWelcome to Hangman!\n")
+
 def printTutorial():
     """Write a tutorial to display at the start of the game"""
 
-    print("\nWelcome to Hangman!\n")
     print("How to play:\n")
     print("A secret word is chosen. Each underscore represents one secret letter.")
     print("Guess one letter at a time. If the letter is in the word, its position(s) will be reveal.")
@@ -273,7 +275,6 @@ def resetPlayerHealth(difficulty, player):
     """Reset Difficulty / player health after a round"""
     player.health = difficulty
     
-
 def main():
     global player
     resetGlobalVariables()
@@ -282,6 +283,7 @@ def main():
     if PLAYEREXISTS:
         pass
     else:
+        printTutorial()
         printTutorial()
         playerName = fetchPlayerName()
     language = letPlayerChooseLanguage()
