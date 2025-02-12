@@ -19,7 +19,7 @@ Experience the game firsthand: [Play Hangman here!](https://hangman-pp3-13b04488
 
 ![Hangman invalid input](./readme-images/invalid-input.png)
 
-[Hangman correct guess](./readme-images/correct-guess-section.png)
+![Hangman correct guess](./readme-images/correct-guess-section.png)
 
 ![Hangman incorrect guess](./readme-images/incorrect-guess-section.png)
 
@@ -40,7 +40,7 @@ Experience the game firsthand: [Play Hangman here!](https://hangman-pp3-13b04488
     ![Hangman guess letter section](./readme-images/guess-letter-section.png)
 
   - Correct guesses reveal the letter in the word.
-    [Hangman correct guess](./readme-images/correct-guess-section.png)
+    ![Hangman correct guess](./readme-images/correct-guess-section.png)
 
   - Incorrect guesses decrease the player's health.
     ![Hangman incorrect guess](./readme-images/incorrect-guess-section.png)

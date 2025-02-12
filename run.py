@@ -71,16 +71,16 @@ def let_player_choose_language(player_name):
     """Let user choose his language to play in"""
     language_options = [
         inquirer.List(
-            'language',
-            message=Fore.CYAN + "Choose the words language",
-            choices=[
-                Fore.YELLOW + "English",
-                Fore.YELLOW + "German",
-                Fore.YELLOW + "Dutch",
-                Fore.YELLOW + "Display Rules again",
-                Fore.RED + "Quit"]
-        ),
-    ]
+                    'language',
+                    message=Fore.CYAN + "Choose the words language",
+                    choices=[
+                        Fore.YELLOW + "English",
+                        Fore.YELLOW + "German",
+                        Fore.YELLOW + "Dutch",
+                        Fore.YELLOW + "Display Rules again",
+                        Fore.RED + "Quit"]
+            ),
+        ]
     chosen_language = inquirer.prompt(language_options)
 
     if chosen_language['language'] == Fore.RED + "Quit":
@@ -149,8 +149,8 @@ def print_tutorial():
     """Write a tutorial to display at the start of the game"""
 
     print(f"""{Fore.YELLOW}How to play:
-{Fore.GREEN}A secret word is chosen. Each underscore represents one 
-secret letter.
+{Fore.GREEN}A secret word is chosen. Each underscore represents one
+ secret letter.
 {Fore.GREEN}Guess one letter at a time. If the letter is in the word,
 its position(s) will be reveal.
 {Fore.GREEN}If the letter is incorrect, you lose one of your guess chances.
@@ -173,6 +173,7 @@ start the game or 'q' to end programm: """).capitalize()
     else:
         return name
 
+
 def display_difficulty_explanation():
     """Display the explanation for the difficulty"""
     print(f"""{Fore.CYAN}You can choose a custom difficulty. The harder you
@@ -183,6 +184,7 @@ want the game to be, the less trys you will have.
 {Fore.RED}Impossible = One wrong guess and you lose
 """)
 
+
 def fetch_custom_difficulty(player_name):
     """Let the user decide how many guesses he wants to have"""
 
@@ -191,15 +193,16 @@ def fetch_custom_difficulty(player_name):
     print(Fore.CYAN + "\nDifficulty selection:\n")
 
     difficulty_options = [
-        inquirer.List('difficulty',
-                      message=Fore.CYAN + "Choose your difficulty",
-                      choices=[
-                            Fore.GREEN + "Easy",
-                            Fore.YELLOW + "Medium",
-                            Fore.MAGENTA + "Hard",
-                            Fore.RED + "Impossible",
-                            Fore.CYAN + "Leave Game"],
-                    ),
+        inquirer.List(
+                    'difficulty',
+                    message=Fore.CYAN + "Choose your difficulty",
+                    choices=[
+                        Fore.GREEN + "Easy",
+                        Fore.YELLOW + "Medium",
+                        Fore.MAGENTA + "Hard",
+                        Fore.RED + "Impossible",
+                        Fore.CYAN + "Leave Game"]
+        ),
     ]
     chosen_difficulty = inquirer.prompt(difficulty_options)
 
@@ -297,12 +300,13 @@ def display_guess_confirmation(guess_letter_validation, player):
 def ask_for_another_round():
     """Ask the player if he wants to play another round"""
     menu_options = [
-        inquirer.List('menu',
-                      message="Do you want to play again",
-                      choices=[
-                        Fore.CYAN + "Play again", 
-                        Fore.CYAN + "Leave Game"],
-                      ),
+        inquirer.List(
+                    'menu',
+                    message="Do you want to play again",
+                    choices=[
+                        Fore.CYAN + "Play again",
+                        Fore.CYAN + "Leave Game"]
+        ),
     ]
     chosen_menu = inquirer.prompt(menu_options)
     return chosen_menu["menu"]
@@ -328,8 +332,8 @@ def display_game_over(player, word):
         print(Fore.RED + f"\nYou lost! The word would have been '{word.capitalize()}'.\n")
     else:
         print(f"""
-{Fore.GREEN}You won and you still had {player.health} tries left. 
-Good job!{Fore.GREEN}The word was '{word}'!
+{Fore.GREEN}You won and you still had {player.health} tries left.
+ Good job!{Fore.GREEN}The word was '{word}'!
 """)
 
 
@@ -338,12 +342,11 @@ def reset_global_variables():
     global correct_list
     global incorrect_list
     global random_instance
-    
+
     correct_list = []
     incorrect_list = []
     random_instance = random.randint(0, 150)
 
-    
 
 def reset_player_health(difficulty, player):
     """Reset Difficulty / player health after a round"""
