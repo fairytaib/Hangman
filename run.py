@@ -382,7 +382,6 @@ def main():
         display_letter_count(word, guessed_correct_letters)
         if guessed_incorrect_letters:
             display_already_guessed_letters(guessed_incorrect_letters)
-        sleep(1)
         guess = let_player_guess_letter(file, player)
         check_for_already_guessed_letter(guess, guessed_correct_letters, guessed_incorrect_letters, file, player)
         letter_validation = check_if_anwser_is_correct(guess, word)
