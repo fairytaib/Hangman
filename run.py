@@ -149,13 +149,13 @@ def print_welcome_message():
 def print_tutorial():
     """Write a tutorial to display at the start of the game"""
 
-    print(Fore.YELLOW + "How to play:\n")
-    print(Fore.GREEN + "A secret word is chosen. Each underscore represents one secret letter.")
-    print(Fore.GREEN + "Guess one letter at a time. If the letter is in the word, its position(s) will be reveal.")
-    print(Fore.GREEN + "If the letter is incorrect, you lose one of your guess chances.")
-    print(Fore.GREEN + "If you need help, write 'help' to get a tip.")
-    print(Fore.GREEN + "Win: All letters are revealed.")
-    print(Fore.RED + "Lose: When you have no guesses left.\n")
+    print("""{Fore.YELLOW} How to play:
+        {Fore.GREEN} A secret word is chosen. Each underscore represents one secret letter.
+        {Fore.GREEN} Guess one letter at a time. If the letter is in the word, its position(s) will be reveal.
+        {Fore.GREEN} If the letter is incorrect, you lose one of your guess chances.
+        {Fore.GREEN} If you need help, write 'help' to get a tip.
+        {Fore.GREEN} Win: All letters are revealed.
+        {Fore.RED} Lose: When you have no guesses left.""")
 
 
 def fetch_player_name(player):
@@ -171,13 +171,14 @@ def fetch_player_name(player):
         return name
 
 
-def fetch_custom_difficulty():
+def fetch_custom_difficulty(tip_available):
     """Let the user decide how many guesses he wants to have"""
-    print(Fore.CYAN + "You can choose a custom difficulty. The harder you want the game to be, the less tries you will have.\n")
-    print(Fore.GREEN + "Easy = 12 wrong guesses")
-    print(Fore.YELLOW + "Medium = 8 wrong guesses")
-    print(Fore.MAGENTA + "Hard = 4 wrong guesses")
-    print(Fore.RED + "Impossible = One wrong guess and you lose\n")
+    print("""Fore.CYAN + "You can choose a custom difficulty. The harder you
+          want the game to be, the less trys you will have.
+        {Fore.GREEN} Easy = 12 wrong guesses
+        {Fore.YELLOW} Medium = 8 wrong guesses
+        {Fore.MAGENTA} Hard = 4 wrong guesses
+        {Fore.RED} Impossible = One wrong guess and you lose""")
 
     global TIPAVAILABLE
 
