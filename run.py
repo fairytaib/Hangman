@@ -28,8 +28,7 @@ random_instance = random.randint(0, 150)
 PLAYEREXISTS = False
 #  Keeps track if the Tip was bought already
 TIPAVAILABLE = True
-# Create gobal Player varibale
-player = None
+
 
 
 def fetch_word(file):
@@ -94,13 +93,12 @@ def let_player_choose_language():
     return chosen_language["language"]
 
 
-def let_player_guess_letter(file, player):
+def let_player_guess_letter(file, player, available_tip):
     """Let the player enter a guessed letter"""
-    global TIPAVAILABLE
-    if player.health > 1 and TIPAVAILABLE:
+    if player.health > 1 and available_tip:
         print(Fore.CYAN + "Guess one letter. Type 'tip' to buy a tip for"
               "one of your health points or write 'quit' to exit the game")
-    elif not TIPAVAILABLE and player.health > 1:
+    elif not available_tip and player.health > 1:
         print(Fore.CYAN + "Guess one letter. Type 'tip' to review the"
               "tip or write 'quit' to exit the game")
     else:
@@ -111,31 +109,31 @@ def let_player_guess_letter(file, player):
     if not guess.isalpha():
         print(Fore.RED + "Only letters are allowed")
         sleep(2)
-        return let_player_guess_letter(file, player)
-    if guess == "tip" and TIPAVAILABLE:
+        return let_player_guess_letter(file, player, available_tip)
+    if guess == "tip" and available_tip:
         help = fetch_tip(file)
         print(f"""{Fore.YELLOW} You bought a tip.
               {Fore.YELLOW} You have now {player.health} tries left.""")
         
         player.health -= 1
-        TIPAVAILABLE = False
+        available_tip = False
         print(help)
         sleep(2)
-        return let_player_guess_letter(file, player)
+        return let_player_guess_letter(file, player, available_tip)
     # If player has already bought the tip
-    elif guess == "tip" and not TIPAVAILABLE and player.health > 1:
+    elif guess == "tip" and not available_tip and player.health > 1:
         help = fetch_tip(file)
         print("""{Fore.YELLOW} Here the tip again
               {help}""")
         sleep(2)
-        return let_player_guess_letter(file, player)
+        return let_player_guess_letter(file, player, available_tip)
     if guess == "quit":
         quit()
 
     if len(guess) > 1:
         print(Fore.RED + "You can guess only one letter")
         sleep(2)
-        return let_player_guess_letter(file, player)
+        return let_player_guess_letter(file, player, available_tip)
     else:
         return guess
 
@@ -180,8 +178,6 @@ def fetch_custom_difficulty(tip_available):
         {Fore.MAGENTA} Hard = 4 wrong guesses
         {Fore.RED} Impossible = One wrong guess and you lose""")
 
-    global TIPAVAILABLE
-
     difficulty_options = [
         inquirer.List(
             'difficulty',
@@ -203,18 +199,17 @@ def fetch_custom_difficulty(tip_available):
     elif chosen_difficulty["difficulty"] == Fore.MAGENTA + "Hard":
         return 4
     elif chosen_difficulty["difficulty"] == Fore.RED + "Impossible":
-        TIPAVAILABLE = False
+        tip_available = False
         return 1
     elif chosen_difficulty["difficulty"] == Fore.CYAN + "Leave Game":
         print(Fore.CYAN + "Goodbye")
         quit()
 
 
-def create_player(player_name, player_difficulty):
+def create_player(player_instance ,player_name, player_difficulty):
     """Create new Player instance"""
-    global PLAYEREXISTS
     new_player = Player(player_name, player_difficulty)
-    PLAYEREXISTS = True
+    player_instance = True
     return new_player
 
 
@@ -241,11 +236,11 @@ def display_already_guessed_letters(wrong_letters):
         print(Fore.CYAN + "You already guessed: " + Fore.RED + f"{wrong_letter_list}")
 
 
-def check_for_already_guessed_letter(guess, correct_guesses, incorrect_guesses, file, player):
+def check_for_already_guessed_letter(guess, correct_guesses, incorrect_guesses, file, player, available_tip):
     """Check the guess of the user and remind him of already guessed letters"""
     if guess in correct_guesses or guess in incorrect_guesses:
         print(Fore.YELLOW + "You already guessed that letter. Try again")
-        return let_player_guess_letter(file, player)
+        return let_player_guess_letter(file, player, available_tip)
     else:
         return guess
 
@@ -324,14 +319,10 @@ def display_game_over(player, word):
         print(Fore.GREEN + f"The word was '{word}'!")
 
 
-def reset_global_variables():
+def reset_global_variables(correct_list, incorrect_list, random_instance):
     """Reset global Variables such as guessed Letters and so on"""
-    global guessed_correct_letters
-    global guessed_incorrect_letters
-    global random_instance
-
-    guessed_correct_letters = []
-    guessed_incorrect_letters = []
+    correct_list = []
+    incorrect_list = []
     random_instance = random.randint(0, 150)
 
 
@@ -340,13 +331,11 @@ def reset_player_health(difficulty, player):
     player.health = difficulty
 
 
-def main():
-    global player
-    reset_global_variables()
-    sleep(1)
-    #  Skip function if User already registered Name
-    if PLAYEREXISTS:
-        pass
+def main(available_tip, player_exists, correct_list, incorrect_list, random_instance):
+    """Run program logic"""
+    if player_exists:
+        reset_global_variables(correct_list, incorrect_list, random_instance)
+        sleep(1)
     else:
         print_welcome_message()
         print_tutorial()
@@ -356,7 +345,7 @@ def main():
     file = fetch_file(file_path)
     playerHealth = fetch_custom_difficulty()
     #  Skip function if User already exists
-    if not PLAYEREXISTS:
+    if not player_exists:
         player = create_player(player_name, playerHealth)
     else:
         reset_player_health(playerHealth, player)
@@ -367,7 +356,7 @@ def main():
         if guessed_incorrect_letters:
             display_already_guessed_letters(guessed_incorrect_letters)
         sleep(1)
-        guess = let_player_guess_letter(file, player)
+        guess = let_player_guess_letter(file, player, available_tip)
         check_for_already_guessed_letter(guess, guessed_correct_letters, guessed_incorrect_letters, file, player)
         letter_validation = check_if_anwser_is_correct(guess, word)
         reduce_player_health(letter_validation, player)
@@ -380,4 +369,4 @@ def main():
             end_game(userChoice)
 
 
-main()
+main(TIPAVAILABLE, PLAYEREXISTS, guessed_correct_letters, guessed_incorrect_letters)
