@@ -28,7 +28,8 @@ random_instance = random.randint(0, 150)
 PLAYEREXISTS = False
 #  Keeps track if the Tip was bought already
 TIPAVAILABLE = True
-
+#  Initialize player
+player = None
 
 
 def fetch_word(file, random_instance):
