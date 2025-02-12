@@ -67,7 +67,7 @@ def fetch_file(file_path):
     return words
 
 
-def let_player_choose_language():
+def let_player_choose_language(player_name):
     """Let user choose his language to play in"""
     language_options = [
         inquirer.List(
@@ -84,12 +84,12 @@ def let_player_choose_language():
     chosen_language = inquirer.prompt(language_options)
 
     if chosen_language['language'] == Fore.RED + "Quit":
-        print(Fore.CYAN + "\nGoodbye")
+        print(Fore.CYAN + f"\nGoodbye. Thank you for playing {player_name}")
         quit()
     elif chosen_language['language'] == Fore.YELLOW + "Display Rules again":
         print_tutorial()
         sleep(2)
-        return let_player_choose_language()
+        return let_player_choose_language(player_name)
 
     return chosen_language["language"]
 
@@ -150,12 +150,12 @@ def print_tutorial():
     """Write a tutorial to display at the start of the game"""
 
     print(f"""{Fore.YELLOW} How to play:
-{Fore.GREEN} A secret word is chosen. Each underscore represents one secret letter.
-{Fore.GREEN} Guess one letter at a time. If the letter is in the word, its position(s) will be reveal.
-{Fore.GREEN} If the letter is incorrect, you lose one of your guess chances.
-{Fore.GREEN} If you need help, write 'help' to get a tip.
-{Fore.GREEN} Win: All letters are revealed.
-{Fore.RED} Lose: When you have no guesses left.
+{Fore.GREEN}A secret word is chosen. Each underscore represents one secret letter.
+{Fore.GREEN}Guess one letter at a time. If the letter is in the word, its position(s) will be reveal.
+{Fore.GREEN}If the letter is incorrect, you lose one of your guess chances.
+{Fore.GREEN}If you need help, write 'help' to get a tip.
+{Fore.GREEN}Win: All letters are revealed.
+{Fore.RED}Lose: When you have no guesses left.
 """)
 
 
@@ -171,18 +171,22 @@ def fetch_player_name(player):
     else:
         return name
 
-
-def fetch_custom_difficulty(tip_available):
-    """Let the user decide how many guesses he wants to have"""
-    print("""Fore.CYAN + "You can choose a custom difficulty. The harder you
+def display_difficulty_explanation():
+    """Display the explanation for the difficulty"""
+    print(f"""{Fore.CYAN}You can choose a custom difficulty. The harder you
 want the game to be, the less trys you will have.
-{Fore.GREEN} Easy = 12 wrong guesses
-{Fore.YELLOW} Medium = 8 wrong guesses
-{Fore.MAGENTA} Hard = 4 wrong guesses
-{Fore.RED} Impossible = One wrong guess and you lose
+{Fore.GREEN}Easy = 12 wrong guesses
+{Fore.YELLOW}Medium = 8 wrong guesses
+{Fore.MAGENTA}Hard = 4 wrong guesses
+{Fore.RED}Impossible = One wrong guess and you lose
 """)
 
+def fetch_custom_difficulty(player_name):
+    """Let the user decide how many guesses he wants to have"""
+
     global TIPAVAILABLE
+
+    print("Difficulty selection:")
 
     difficulty_options = [
         inquirer.List(
@@ -208,7 +212,7 @@ want the game to be, the less trys you will have.
         TIPAVAILABLE = False
         return 1
     elif chosen_difficulty["difficulty"] == Fore.CYAN + "Leave Game":
-        print(Fore.CYAN + "Goodbye")
+        print(Fore.CYAN + f"Goodbye. Thank you very much for playing {player_name}")
         quit()
 
 
@@ -224,8 +228,7 @@ def display_letter_count(word, guessed_correct_letters):
     """Display the amount of letters the word has as underlines"""
     combined_letters = []
     if len(guessed_correct_letters) == 0:
-        print(Fore.CYAN + "The Word is: " +
-              Fore.GREEN + " ".join(["_" for letter in word]))
+        print(f"""{Fore.CYAN}The Word is: {Fore.GREEN}{" ".join(["_" for letter in word])}""")
     else:  # Merge guessed Letters and missing letters
         for letter in word:
             if letter in guessed_correct_letters:
@@ -309,20 +312,21 @@ def check_for_game_end(player, word, correct_guesses):
         return True
 
 
-def end_game(choice):
+def end_game(choice, player):
     if choice == "Play again":
         main()
     else:
-        print(Fore.CYAN + "\nGoodbye")
+        print(Fore.CYAN + f"\nGoodbye. Thank you for playing {player.name}")
         quit()
 
 
 def display_game_over(player, word):
     """Display an individual message depending in the loss or win of the player"""
     if player.health == 0:
-        print(Fore.RED + f"You lost! The word would have been '{word}'.")
+        print(Fore.RED + f"\nYou lost! The word would have been '{word}'.")
     else:
-        print(f"""{Fore.GREEN} You won and you still had {player.health} tries left. 
+        print(f"""
+{Fore.GREEN}You won and you still had {player.health} tries left. 
 Good job!{Fore.GREEN}The word was '{word}'!
 """)
 
@@ -346,18 +350,21 @@ def reset_player_health(difficulty, player):
 def main():
     global player
     reset_global_variables()
-    sleep(1)
     #  Skip function if User already registered Name
     if PLAYEREXISTS:
         pass
     else:
         print_welcome_message()
         print_tutorial()
+        sleep(2)
         player_name = fetch_player_name(player)
-    language = let_player_choose_language()
+    print(Fore.CYNA + "Language selection:\n")
+    language = let_player_choose_language(player_name)
     file_path = fetch_language_file_path(language)
     file = fetch_file(file_path)
-    playerHealth = fetch_custom_difficulty()
+    display_difficulty_explanation()
+    sleep(2)
+    playerHealth = fetch_custom_difficulty(player_name)
     #  Skip function if User already exists
     if not PLAYEREXISTS:
         player = create_player(player_name, playerHealth)
@@ -380,7 +387,7 @@ def main():
         if gameEndValidation:
             display_game_over(player, word)
             userChoice = ask_for_another_round()
-            end_game(userChoice)
+            end_game(userChoice, player)
 
 
 main()
