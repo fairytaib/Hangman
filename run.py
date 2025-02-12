@@ -88,7 +88,7 @@ def let_player_choose_language(player_name):
         quit()
     elif chosen_language['language'] == Fore.YELLOW + "Display Rules again":
         print_tutorial()
-        sleep(2)
+        sleep(1)
         return let_player_choose_language(player_name)
 
     return chosen_language["language"]
@@ -110,7 +110,7 @@ def let_player_guess_letter(file, player):
 
     if not guess.isalpha():
         print(Fore.RED + "\nOnly letters are allowed\n")
-        sleep(2)
+        sleep(1)
         return let_player_guess_letter(file, player)
     if guess == "tip" and TIPAVAILABLE:
         help = fetch_tip(file)
@@ -120,20 +120,20 @@ Here the tip: {help}
 """)
         player.health -= 1
         TIPAVAILABLE = False
-        sleep(2)
+        sleep(1)
         return let_player_guess_letter(file, player)
     # If player has already bought the tip
     elif guess == "tip" and not TIPAVAILABLE and player.health > 1:
         help = fetch_tip(file)
         print(f"""{Fore.YELLOW} Here the tip again: {help}""")
-        sleep(2)
+        sleep(1)
         return let_player_guess_letter(file, player)
     if guess == "quit":
         quit()
 
     if len(guess) > 1:
         print(Fore.RED + "You can guess only one letter")
-        sleep(2)
+        sleep(1)
         return let_player_guess_letter(file, player)
     else:
         return guess
@@ -362,14 +362,14 @@ def main():
     else:
         print_welcome_message()
         print_tutorial()
-        sleep(2)
+        sleep(1)
         player_name = fetch_player_name()
     print(Fore.CYAN + "\nLanguage selection:\n")
     language = let_player_choose_language(player_name)
     file_path = fetch_language_file_path(language)
     file = fetch_file(file_path)
     display_difficulty_explanation()
-    sleep(2)
+    sleep(1)
     playerHealth = fetch_custom_difficulty(player_name)
     #  Skip function if User already exists
     if not player_exists:
