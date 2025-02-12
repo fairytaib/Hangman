@@ -125,7 +125,7 @@ def let_player_guess_letter(file, player):
     # If player has already bought the tip
     elif guess == "tip" and not TIPAVAILABLE and player.health > 1:
         help = fetch_tip(file)
-        print("""{Fore.YELLOW} Here the tip again
+        print(f"""{Fore.YELLOW} Here the tip again
               {help}""")
         sleep(2)
         return let_player_guess_letter(file, player)
@@ -149,13 +149,14 @@ def print_welcome_message():
 def print_tutorial():
     """Write a tutorial to display at the start of the game"""
 
-    print("""{Fore.YELLOW} How to play:
-        {Fore.GREEN} A secret word is chosen. Each underscore represents one secret letter.
-        {Fore.GREEN} Guess one letter at a time. If the letter is in the word, its position(s) will be reveal.
-        {Fore.GREEN} If the letter is incorrect, you lose one of your guess chances.
-        {Fore.GREEN} If you need help, write 'help' to get a tip.
-        {Fore.GREEN} Win: All letters are revealed.
-        {Fore.RED} Lose: When you have no guesses left.""")
+    print(f"""{Fore.YELLOW} How to play:
+{Fore.GREEN} A secret word is chosen. Each underscore represents one secret letter.
+{Fore.GREEN} Guess one letter at a time. If the letter is in the word, its position(s) will be reveal.
+{Fore.GREEN} If the letter is incorrect, you lose one of your guess chances.
+{Fore.GREEN} If you need help, write 'help' to get a tip.
+{Fore.GREEN} Win: All letters are revealed.
+{Fore.RED} Lose: When you have no guesses left.
+""")
 
 
 def fetch_player_name(player):
@@ -174,11 +175,12 @@ def fetch_player_name(player):
 def fetch_custom_difficulty(tip_available):
     """Let the user decide how many guesses he wants to have"""
     print("""Fore.CYAN + "You can choose a custom difficulty. The harder you
-          want the game to be, the less trys you will have.
-        {Fore.GREEN} Easy = 12 wrong guesses
-        {Fore.YELLOW} Medium = 8 wrong guesses
-        {Fore.MAGENTA} Hard = 4 wrong guesses
-        {Fore.RED} Impossible = One wrong guess and you lose""")
+want the game to be, the less trys you will have.
+{Fore.GREEN} Easy = 12 wrong guesses
+{Fore.YELLOW} Medium = 8 wrong guesses
+{Fore.MAGENTA} Hard = 4 wrong guesses
+{Fore.RED} Impossible = One wrong guess and you lose
+""")
 
     global TIPAVAILABLE
 
@@ -320,8 +322,9 @@ def display_game_over(player, word):
     if player.health == 0:
         print(Fore.RED + f"You lost! The word would have been '{word}'.")
     else:
-        print(Fore.GREEN + f"You won and you still had {player.health} tries left. Good job")
-        print(Fore.GREEN + f"The word was '{word}'!")
+        print(f"""{Fore.GREEN} You won and you still had {player.health} tries left. 
+Good job!{Fore.GREEN}The word was '{word}'!
+""")
 
 
 def reset_global_variables():
