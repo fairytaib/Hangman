@@ -99,7 +99,9 @@ To dynamically fetch words, different APIs were considered and tested. The follo
 - [API Ninjas - Random Word](https://www.api-ninjas.com/api/randomword)
 - [Random Words GitHub Repository](https://github.com/mcnaveen/Random-Words-API)
 
-However, the API that was supposed to generate a random word along with its description encountered internal issues (HTTP 500 status). Additionally, integrating **Random Word APIs** with **Dictionary APIs** proved problematic, as some generated words were not found in the dictionary.  
+However, the API that was supposed to generate a random word along with its description encountered internal issues (HTTP 500 status). Additionally, integrating **Random Word APIs** with **Dictionary APIs** proved problematic, as some generated words were not found in the dictionary.
+
+To ensure stability and reliability, JSON files were used instead. JSON is a structured and immutable data format in Python, meaning its content cannot be modified directly during execution. This made it an ideal choice for storing predefined words along with their descriptions, ensuring consistency across different game sessions. By using a JSON file, I could avoid API failures, maintain control over the word list, and ensure that each word had a valid definition.
 
 ### Custom Word List
 Due to these limitations, I decided to create my own curated word list instead. This ensured better control over word selection and guaranteed that each word had a corresponding definition.
@@ -193,7 +195,7 @@ To deploy the project via GitHub Pages:
 
 ### Code Validation
 - [CI Python Linter:](https://pep8ci.herokuapp.com/) The Python code was checked for syntax errors and other potential issues to ensure that it runs without errors.
-    ![Val](./readme-images/validation/ci-python-validator.png)
+    ![Val](./readme-images/validation/ci-python-validation.png)
 - Libraries: Verified that all used libraries (such as colorama, inquirer, and json) are correctly installed and function properly.
 
 ## Bugs Encountered, Solutions, and General Observations
