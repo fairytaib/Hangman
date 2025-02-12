@@ -159,14 +159,14 @@ def print_tutorial():
 """)
 
 
-def fetch_player_name(player):
+def fetch_player_name():
     """Let the user name himself for a more immersiv experience"""
     name = input(Fore.CYAN + "Enter your Name (at least one letter) to start the game or 'q' to end programm: ").capitalize()
     if not name.isalpha():
         print(Fore.RED + "Please enter only letters and no whitespace.\n")
-        return fetch_player_name(player)
+        return fetch_player_name()
     elif name == "Q":
-        print(f"{Fore.CYAN} Goodbye. Thank you for playing {player.name}")
+        print(f"{Fore.CYAN} Goodbye. Thank you for playing")
         quit()
     else:
         return name
@@ -357,7 +357,7 @@ def main():
         print_welcome_message()
         print_tutorial()
         sleep(2)
-        player_name = fetch_player_name(player)
+        player_name = fetch_player_name()
     print(Fore.CYAN + "\nLanguage selection:\n")
     language = let_player_choose_language(player_name)
     file_path = fetch_language_file_path(language)
@@ -382,10 +382,9 @@ def main():
         letter_validation = check_if_anwser_is_correct(guess, word)
         reduce_player_health(letter_validation, player)
         display_guess_confirmation(letter_validation, player)
-        sleep(2)
         append_letter_into_list(letter_validation, guess)
         gameEndValidation = check_for_game_end(player, word, guessed_correct_letters)
-        sleep(2)
+        sleep(1)
         if gameEndValidation:
             display_game_over(player, word)
             userChoice = ask_for_another_round()
