@@ -149,8 +149,10 @@ def print_tutorial():
     """Write a tutorial to display at the start of the game"""
 
     print(f"""{Fore.YELLOW} How to play:
-{Fore.GREEN}A secret word is chosen. Each underscore represents one secret letter.
-{Fore.GREEN}Guess one letter at a time. If the letter is in the word, its position(s) will be reveal.
+{Fore.GREEN}A secret word is chosen. Each underscore represents one 
+secret letter.
+{Fore.GREEN}Guess one letter at a time. If the letter is in the word,
+its position(s) will be reveal.
 {Fore.GREEN}If the letter is incorrect, you lose one of your guess chances.
 {Fore.GREEN}If you need help, write 'help' to get a tip.
 {Fore.GREEN}Win: All letters are revealed.
@@ -160,8 +162,8 @@ def print_tutorial():
 
 def fetch_player_name():
     """Let the user name himself for a more immersiv experience"""
-    name = input(Fore.CYAN + "Enter your Name (at least one letter) to " 
-                 "start the game or 'q' to end programm: ").capitalize()
+    name = input(f"""{Fore.CYAN}Enter your Name (at least one letter) to
+start the game or 'q' to end programm: """).capitalize()
     if not name.isalpha():
         print(Fore.RED + "\nPlease enter only letters and no whitespace.\n")
         return fetch_player_name()
@@ -211,7 +213,8 @@ def fetch_custom_difficulty(player_name):
         tip_available = False
         return 1
     elif chosen_difficulty["difficulty"] == Fore.CYAN + "Leave Game":
-        print(Fore.CYAN + f"Goodbye. Thank you very much for playing {player_name}\n")
+        print(f"""{Fore.CYAN}Goodbye.
+Thank you very much for playing {player_name}\n""")
         quit()
 
 
