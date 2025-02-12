@@ -148,7 +148,7 @@ def print_welcome_message():
 def print_tutorial():
     """Write a tutorial to display at the start of the game"""
 
-    print(f"""{Fore.YELLOW} How to play:
+    print(f"""{Fore.YELLOW}How to play:
 {Fore.GREEN}A secret word is chosen. Each underscore represents one 
 secret letter.
 {Fore.GREEN}Guess one letter at a time. If the letter is in the word,
@@ -168,7 +168,7 @@ start the game or 'q' to end programm: """).capitalize()
         print(Fore.RED + "\nPlease enter only letters and no whitespace.\n")
         return fetch_player_name()
     elif name == "Q":
-        print(f"{Fore.CYAN} Goodbye. Thank you for playing\n")
+        print(f"{Fore.CYAN}\nGoodbye. Thank you for playing\n")
         quit()
     else:
         return name
@@ -213,7 +213,7 @@ def fetch_custom_difficulty(player_name):
         tip_available = False
         return 1
     elif chosen_difficulty["difficulty"] == Fore.CYAN + "Leave Game":
-        print(f"""{Fore.CYAN}Goodbye.
+        print(f"""{Fore.CYAN}\nGoodbye.
 Thank you very much for playing {player_name}\n""")
         quit()
 
