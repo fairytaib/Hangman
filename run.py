@@ -46,17 +46,17 @@ def fetch_tip(file):
 
 def fetch_language_file_path(language):
     """Fetch correct file path corresponding to chosen language"""
-    if language == "German":
+    if language == Fore.YELLOW + "German":
         file_path = "assets/json/de-words.json"
-        print(Fore.CYAN + "Du hast Deutsch gewählt\n")
+        print(Fore.CYAN + "Du hast Deutsch gewählt.\n")
         return file_path
-    elif language == "Dutch":
+    elif language == Fore.YELLOW + "Dutch":
         file_path = "assets/json/du-words.json"
-        print(Fore.CYAN + "Je hebt Nederlands gekozen\n")
+        print(Fore.CYAN + "Je hebt Nederlands gekozen.\n")
         return file_path
     else:
         file_path = "assets/json/en-words.json"
-        print(Fore.CYAN + "You chose english\n")
+        print(Fore.CYAN + "You chose english.\n")
         return file_path
 
 
@@ -98,15 +98,15 @@ def let_player_guess_letter(file, player):
     """Let the player enter a guessed letter"""
     global TIPAVAILABLE
     if player.health > 1 and TIPAVAILABLE:
-        print(Fore.CYAN + "Guess one letter. Type 'tip' to buy a tip for"
+        print(Fore.CYAN + "\nGuess one letter. Type 'tip' to buy a tip for "
               "one of your health points or write 'quit' to exit the game")
     elif not TIPAVAILABLE and player.health > 1:
-        print(Fore.CYAN + "Guess one letter. Type 'tip' to review the"
+        print(Fore.CYAN + "\nGuess one letter. Type 'tip' to review the"
               "tip or write 'quit' to exit the game")
     else:
-        print(Fore.CYAN + "Guess one letter. Write 'quit' to exit the game")
+        print(Fore.CYAN + "\nGuess one letter. Write 'quit' to exit the game")
 
-    guess = input(Fore.CYAN + "Your guess: ").lower()
+    guess = input(Fore.CYAN + "\nYour guess: ").lower()
 
     if not guess.isalpha():
         print(Fore.RED + "Only letters are allowed")
@@ -186,7 +186,7 @@ def fetch_custom_difficulty(player_name):
 
     global TIPAVAILABLE
 
-    print("Difficulty selection:")
+    print(Fore.CYAN + "Difficulty selection:\n")
 
     difficulty_options = [
         inquirer.List(
@@ -358,7 +358,7 @@ def main():
         print_tutorial()
         sleep(2)
         player_name = fetch_player_name(player)
-    print(Fore.CYAN + "Language selection:\n")
+    print(Fore.CYAN + "\nLanguage selection:\n")
     language = let_player_choose_language(player_name)
     file_path = fetch_language_file_path(language)
     file = fetch_file(file_path)
