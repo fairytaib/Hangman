@@ -329,13 +329,17 @@ Good job!{Fore.GREEN}The word was '{word}'!
 """)
 
 
-def reset_global_variables(correct_list, incorrect_list, random_instance):
+def reset_global_variables():
     """Reset global Variables such as guessed Letters and so on"""
+    global correct_list
+    global incorrect_list
+    global random_instance
+    
     correct_list = []
     incorrect_list = []
     random_instance = random.randint(0, 150)
 
-    return correct_list, incorrect_list, random_instance
+    
 
 def reset_player_health(difficulty, player):
     """Reset Difficulty / player health after a round"""
@@ -346,7 +350,7 @@ def main():
     global player
     reset_global_variables()
     #  Skip function if User already registered Name
-    if PLAYEREXISTS:
+    if player:
         pass
     else:
         print_welcome_message()
@@ -361,7 +365,7 @@ def main():
     sleep(2)
     playerHealth = fetch_custom_difficulty(player_name)
     #  Skip function if User already exists
-    if not player_exists:
+    if not player:
         player = create_player(player_name, playerHealth)
     else:
         reset_player_health(playerHealth, player)
@@ -372,7 +376,7 @@ def main():
         if guessed_incorrect_letters:
             display_already_guessed_letters(guessed_incorrect_letters)
         sleep(1)
-        guess = let_player_guess_letter(file, player, available_tip, random_instance)
+        guess = let_player_guess_letter(file, player, random_instance)
         check_for_already_guessed_letter(guess, guessed_correct_letters, guessed_incorrect_letters, file, player)
         letter_validation = check_if_anwser_is_correct(guess, word)
         reduce_player_health(letter_validation, player)
@@ -386,4 +390,4 @@ def main():
             end_game(userChoice, player)
 
 
-main(TIPAVAILABLE, PLAYEREXISTS, guessed_correct_letters, guessed_incorrect_letters)
+main()
