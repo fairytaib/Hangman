@@ -358,7 +358,7 @@ def main():
         print_tutorial()
         sleep(2)
         player_name = fetch_player_name(player)
-    print(Fore.CYNA + "Language selection:\n")
+    print(Fore.CYAN + "Language selection:\n")
     language = let_player_choose_language(player_name)
     file_path = fetch_language_file_path(language)
     file = fetch_file(file_path)
