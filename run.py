@@ -158,14 +158,14 @@ def print_tutorial():
     print(Fore.RED + "Lose: When you have no guesses left.\n")
 
 
-def fetch_player_name():
+def fetch_player_name(player):
     """Let the user name himself for a more immersiv experience"""
-    name = input(Fore.CYAN + "Enter your Name to start the game or 'q' to end programm: ").capitalize()
+    name = input(Fore.CYAN + "Enter your Name (at least one letter) to start the game or 'q' to end programm: ").capitalize()
     if not name.isalpha():
         print(Fore.RED + "Please enter only letters and no whitespace.\n")
-        return fetch_player_name()
+        return fetch_player_name(player)
     elif name == "Q":
-        print(Fore.CYAN + "Goodbye")
+        print(f"{Fore.CYAN} Goodbye. Thank you for playing {player.name}")
         quit()
     else:
         return name
@@ -173,7 +173,7 @@ def fetch_player_name():
 
 def fetch_custom_difficulty():
     """Let the user decide how many guesses he wants to have"""
-    print(Fore.CYAN + "You can choose a custom difficulty. The harder you want the game to be, the less trys you will have.\n")
+    print(Fore.CYAN + "You can choose a custom difficulty. The harder you want the game to be, the less tries you will have.\n")
     print(Fore.GREEN + "Easy = 12 wrong guesses")
     print(Fore.YELLOW + "Medium = 8 wrong guesses")
     print(Fore.MAGENTA + "Hard = 4 wrong guesses")
@@ -268,6 +268,7 @@ def reduce_player_health(letter_validation, player):
 
 
 def append_letter_into_list(letter_validation, guess):
+    """Append letter into the specified list"""
     if letter_validation:
         guessed_correct_letters.append(guess)
     else:
@@ -280,7 +281,7 @@ def display_guess_confirmation(guess_letter_validation, player):
         print(Fore.GREEN + "You guessed correct!")
     else:
         if player.health > 1:
-            print(Fore.RED + f"Incorrect. You have {player.health} trys left")
+            print(Fore.RED + f"Incorrect. You have {player.health} tries left")
         else:
             return
 
@@ -316,7 +317,7 @@ def display_game_over(player, word):
     if player.health == 0:
         print(Fore.RED + f"You lost! The word would have been '{word}'.")
     else:
-        print(Fore.GREEN + f"You won and you still had {player.health} trys left. Good job")
+        print(Fore.GREEN + f"You won and you still had {player.health} tries left. Good job")
         print(Fore.GREEN + f"The word was '{word}'!")
 
 
@@ -346,7 +347,7 @@ def main():
     else:
         print_welcome_message()
         print_tutorial()
-        player_name = fetch_player_name()
+        player_name = fetch_player_name(player)
     language = let_player_choose_language()
     file_path = fetch_language_file_path(language)
     file = fetch_file(file_path)
