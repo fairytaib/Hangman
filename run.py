@@ -302,7 +302,7 @@ def ask_for_another_round():
     menu_options = [
         inquirer.List(
                     'menu',
-                    message="Do you want to play again",
+                    message=Fore.CYAN + "Do you want to play again",
                     choices=[
                         Fore.CYAN + "Play again",
                         Fore.CYAN + "Leave Game"]
