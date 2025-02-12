@@ -289,7 +289,7 @@ def display_guess_confirmation(guess_letter_validation, player):
         print(Fore.GREEN + "You guessed correct!")
     else:
         if player.health > 1:
-            print(Fore.RED + f"Incorrect. You have {player.health} tries left")
+            print(Fore.RED + f"\nIncorrect. You have {player.health} tries left.\n")
         else:
             return
 
@@ -382,8 +382,10 @@ def main():
         letter_validation = check_if_anwser_is_correct(guess, word)
         reduce_player_health(letter_validation, player)
         display_guess_confirmation(letter_validation, player)
+        sleep(2)
         append_letter_into_list(letter_validation, guess)
         gameEndValidation = check_for_game_end(player, word, guessed_correct_letters)
+        sleep(2)
         if gameEndValidation:
             display_game_over(player, word)
             userChoice = ask_for_another_round()
