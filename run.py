@@ -188,16 +188,14 @@ def fetch_custom_difficulty(player_name):
     print(Fore.CYAN + "Difficulty selection:\n")
 
     difficulty_options = [
-        inquirer.List(
-            'difficulty',
-            message=Fore.CYAN + "Choose your difficulty",
-            choices=
-                [Fore.GREEN + "Easy",
-                Fore.YELLOW + "Medium",
-                Fore.MAGENTA + "Hard",
-                Fore.RED + "Impossible",
-                Fore.CYAN + "Leave Game"],
-            ),
+        inquirer.List('difficulty',
+                      message=Fore.CYAN + "Choose your difficulty",
+                      choices=[Fore.GREEN + "Easy",
+                               Fore.YELLOW + "Medium",
+                               Fore.MAGENTA + "Hard",
+                               Fore.RED + "Impossible",
+                               Fore.CYAN + "Leave Game"],
+                      ),
     ]
     chosen_difficulty = inquirer.prompt(difficulty_options)
 
