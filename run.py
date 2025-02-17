@@ -215,8 +215,7 @@ def fetch_custom_difficulty(player_name):
     elif chosen_difficulty["difficulty"] == Fore.MAGENTA + "Hard":
         return 4
     elif chosen_difficulty["difficulty"] == Fore.RED + "Impossible":
-        tip_available = False
-        tip_available = False
+        TIPAVAILABLE = False
         return 1
     elif chosen_difficulty["difficulty"] == Fore.CYAN + "Leave Game":
         print(f"""{Fore.CYAN}\nGoodbye.
@@ -303,7 +302,8 @@ def display_guess_confirmation(guess_letter_validation, player):
         print(Fore.GREEN + "\nYou guessed correct!\n")
     else:
         if player.health > 1:
-            print(Fore.RED + f"\nIncorrect. You have {player.health} tries left.\n")
+            print(Fore.RED +
+                  f"\nIncorrect. You have {player.health} tries left.\n")
         else:
             return
 
@@ -338,9 +338,11 @@ def end_game(choice, player):
 
 
 def display_game_over(player, word):
-    """Display an individual message depending in the loss or win of the player"""
+    """Display an individual message
+    depending in the loss or win of the player"""
     if player.health == 0:
-        print(Fore.RED + f"\nYou lost! The word would have been '{word.capitalize()}'.\n")
+        print(Fore.RED +
+              f"\nYou lost! The word would have been '{word.capitalize()}'.\n")
     else:
         print(f"""
 {Fore.GREEN}You won and you still had {player.health} tries left.
@@ -394,12 +396,15 @@ def main():
         if guessed_incorrect_letters:
             display_already_guessed_letters(guessed_incorrect_letters)
         guess = let_player_guess_letter(file, player)
-        check_for_already_guessed_letter(guess, guessed_correct_letters, guessed_incorrect_letters, file, player)
+        check_for_already_guessed_letter(
+            guess, guessed_correct_letters,
+            guessed_incorrect_letters, file, player)
         letter_validation = check_if_anwser_is_correct(guess, word)
         reduce_player_health(letter_validation, player)
         display_guess_confirmation(letter_validation, player)
         append_letter_into_list(letter_validation, guess)
-        gameEndValidation = check_for_game_end(player, word, guessed_correct_letters)
+        gameEndValidation = check_for_game_end(
+            player, word, guessed_correct_letters)
         sleep(1)
         if gameEndValidation:
             display_game_over(player, word)
