@@ -104,7 +104,8 @@ def let_player_guess_letter(file, player):
         print(Fore.CYAN + "\nGuess one letter. Type 'tip' to review the"
               "tip or write 'quit' to exit the game.\n")
     else:
-        print(Fore.CYAN + "\nGuess one letter. Write 'quit' to exit the game.\n")
+        print(Fore.CYAN + "\nGuess one letter."
+              " Write 'quit' to exit the game\n")
 
     guess = input(Fore.CYAN + "\nYour guess: ").lower()
 
@@ -141,7 +142,8 @@ Here the tip: {help}
 
 def print_welcome_message():
     """Print Welcome Message"""
-    # Seperated from tutorial message to call tutorial on different places of the game
+    # Seperated from tutorial message to call tutorial on different
+    # places of the game
     print(Fore.CYAN + "\nWelcome to Hangman!\n")
 
 
@@ -226,7 +228,7 @@ def create_player(player_name, player_difficulty):
     """Create new Player instance"""
     global player_exists
     new_player = Player(player_name, player_difficulty)
-    player = True
+    player_exists = True
     return new_player
 
 
@@ -234,14 +236,20 @@ def display_letter_count(word, guessed_correct_letters):
     """Display the amount of letters the word has as underlines"""
     combined_letters = []
     if len(guessed_correct_letters) == 0:
-        print(f"{Fore.CYAN}The Word is: {Fore.GREEN}{" ".join(["_" for letter in word])}")
-    else:  # Merge guessed Letters and missing letters
+        print(
+            f"{Fore.CYAN}The Word is: {Fore.GREEN}"
+            f'{" ".join(["_" for letter in word])}'
+        )
+    else:
         for letter in word:
             if letter in guessed_correct_letters:
                 combined_letters.append(letter)
             else:
                 combined_letters.append("_")
-        print(f"{Fore.CYAN}The Word is: {Fore.GREEN}{" ".join(combined_letters)}")
+        print(
+            f"{Fore.CYAN}The Word is: {Fore.GREEN}"
+            f'{" ".join(combined_letters)}'
+        )
 
 
 def display_already_guessed_letters(wrong_letters):
@@ -251,7 +259,9 @@ def display_already_guessed_letters(wrong_letters):
         print(f"{Fore.CYAN}You already guessed: {Fore.RED}{wrong_letter_list}")
 
 
-def check_for_already_guessed_letter(guess, correct_guesses, incorrect_guesses, file, player):
+def check_for_already_guessed_letter(
+      guess, correct_guesses, incorrect_guesses, file, player
+      ):
     """Check the guess of the user and remind him of already guessed letters"""
     if guess in correct_guesses or guess in incorrect_guesses:
         print(Fore.YELLOW + "\nYou already guessed that letter. Try again.\n")
