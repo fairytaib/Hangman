@@ -180,8 +180,6 @@ def fetch_custom_difficulty(tip_available):
         {Fore.MAGENTA} Hard = 4 wrong guesses
         {Fore.RED} Impossible = One wrong guess and you lose""")
 
-    global TIPAVAILABLE
-
     difficulty_options = [
         inquirer.List('difficulty',
                       message=Fore.CYAN + "Choose your difficulty",
@@ -201,7 +199,7 @@ def fetch_custom_difficulty(tip_available):
     elif chosen_difficulty["difficulty"] == Fore.MAGENTA + "Hard":
         return 4
     elif chosen_difficulty["difficulty"] == Fore.RED + "Impossible":
-        TIPAVAILABLE = False
+        tip_available = False
         return 1
     elif chosen_difficulty["difficulty"] == Fore.CYAN + "Leave Game":
         print(Fore.CYAN + "Goodbye")
@@ -337,7 +335,7 @@ def reset_player_health(difficulty, player):
     player.health = difficulty
 
 
-def main():
+def main(tip_available):
     global player
     reset_global_variables()
     sleep(1)
@@ -351,7 +349,7 @@ def main():
     language = let_player_choose_language()
     file_path = fetch_language_file_path(language)
     file = fetch_file(file_path)
-    playerHealth = fetch_custom_difficulty()
+    playerHealth = fetch_custom_difficulty(tip_available)
     #  Skip function if User already exists
     if not PLAYEREXISTS:
         player = create_player(player_name, playerHealth)
