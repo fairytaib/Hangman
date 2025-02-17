@@ -109,10 +109,13 @@ def let_player_guess_letter(file, player):
 
     guess = input(Fore.CYAN + "\nYour guess: ").lower()
 
-    if not guess.isalpha():
+    if guess == "":
+        print(Fore.RED + "\nPlease enter at least one letter\n")
+    elif not guess.isalpha():
         print(Fore.RED + "\nOnly letters are allowed\n")
         sleep(1)
         return let_player_guess_letter(file, player)
+
     if guess == "tip" and TIPAVAILABLE:
         help = fetch_tip(file)
         print(f"""{Fore.YELLOW}You bought a tip.
@@ -166,7 +169,10 @@ def fetch_player_name():
     """Let the user name himself for a more immersiv experience"""
     name = input(f"""{Fore.CYAN}Enter your Name (at least one letter) to
 start the game or 'q' to end programm: """).capitalize()
-    if not name.isalpha():
+
+    if name == "":
+        print(Fore.RED + "\nPlease enter at least one letter\n")
+    elif not name.isalpha():
         print(Fore.RED + "\nPlease enter only letters and no whitespace.\n")
         return fetch_player_name()
     elif name == "Q":
