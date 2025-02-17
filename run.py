@@ -412,4 +412,5 @@ def main():
             end_game(userChoice, player)
 
 
-main()
+if __name__ == "__main__":
+    main()
