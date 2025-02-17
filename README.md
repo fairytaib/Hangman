@@ -124,41 +124,50 @@ The game underwent multiple testing phases to ensure smooth gameplay and accurat
 - **Version Control**:
   - Git: Used for version control to track changes and manage the development process.
   - GitHub: Used as a cloud-based platform to store and share the code repository.
-  - GitHub Pages: Used to deploy the game as a static web application for testing, showcasing, and easy access.
-  - Gitpod: Used as an integrated development environment (IDE) to write and edit the code.
+  - Heroku: The game is deployed on Heroku, allowing easy access and testing in a live environment.
 
 - **Other Technology**
   - Miro: Used for planning and visualizing game structure, creating flowcharts, and collaborating on gameplay mechanics.
-  - Balsamiq Wireframe: Used to create low-fidelity wireframes for UI layout and structure before design implementation.
-
-## Getting started
+  
+## Getting Started
 
 ### Prerequisites
 
 To run Hangman locally, ensure you have:
 
-Python 3.x installed on your machine.
-The colorama, inquirer, and json libraries installed. You can install them using pip:
-
-```
-pip install colorama inquirer
-```
+- **Python 3.x** installed on your machine. You can download it from [python.org](https://www.python.org/downloads/).
+- **Git** installed to clone the repository. Download it from [git-scm.com](https://git-scm.com/).
 
 ### Installation
 
-- Clone the repository:
+1. **Clone the repository**  
+   Open a terminal and run:
+   ```sh
+   git clone https://github.com/your-username/hangman.git
+2. **Navigate to the folder**
+    ```Sh
+    cd hangman
+3. **Create and activate a virtual environment**
+  
+    This ensures that all dependencies are installed in an isolated environment and do not clutter your global Python installation.
+  - On Windows
+      ```sh
+      python -m venv venv
+      venv\Scripts\activate
+  - On macOS/Linux:
+      ```sh
+      python -m venv venv
+      venv\Scripts\activate
+4. **Install dependencies**
+  
+    Instead of installing libraries manually, install all required dependencies from the requirements.txt file:
+      ```sh
+      pip install -r requirements.txt
+5. **Run the game**
 
-```
-git clone https://github.com/your-username/hangman.git
-```
-
-- Navigate to the project folder:
-```
-cd hangman
-```
-
-- Open the hangman.py file in your preferred text editor or IDE.
-
+    Open the `hangman.py` file in your preferred text editor or IDE and run it:
+    ```sh
+    python hangman.py
 ### How to Play
 
 - Run the game by executing the hangman.py file:
@@ -220,6 +229,9 @@ While Hangman is currently a functional and enjoyable game, there are some avenu
 - **More Word Lists:** Expanding the variety of words by adding more word lists, potentially with different themes or categories, would increase replayability.
 - **Hints and Clues:** Adding more creative and helpful hints or clues for the words would make the game more accessible and enjoyable.
 - **Thematic Content:** Incorporating thematic content, such as by using words related to a specific topic or adding visual elements that match the theme, could create a more cohesive experience.
+- **Player Progress Tracking**:  
+  Implement a feature that allows players to track their progress and
+  use **Google Tables** to store game data, making it accessible via commands. 
 
 ## Credits
 
@@ -231,9 +243,10 @@ While Hangman is currently a functional and enjoyable game, there are some avenu
 - **Stack Overflow**: All kinds of different questions and anwsers from [Stack Overflow](https://stackoverflow.com/).
 
 **Code Validation and Development Tools**
-- **W3C**: Code validation conducted using [W3C](https://www.w3.org/).
+- **Python Linter**: Code validation conducted using [CI Python Linter](https://pep8ci.herokuapp.com/#).
 - **Git**: Version control handled with [Git](https://git-scm.com/).
 - **GitHub**: Cloud-based platform for storing and sharing code via [GitHub](https://github.com/).
+- **Heroku**: Used for deploying and hosting the game, enabling live testing and accessibility on [Heroku](https://www.heroku.com/home).  
 - **VS Studio Code**: Text editor for coding
 
 **Mentoring and Guidance**
