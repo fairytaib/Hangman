@@ -67,7 +67,7 @@ def fetch_file(file_path):
     return words
 
 
-def let_player_choose_language(player_name):
+def let_player_choose_language():
     """Let user choose his language to play in"""
     language_options = [
         inquirer.List(
@@ -84,12 +84,12 @@ def let_player_choose_language(player_name):
     chosen_language = inquirer.prompt(language_options)
 
     if chosen_language['language'] == Fore.RED + "Quit":
-        print(Fore.CYAN + f"\nGoodbye. Thank you for playing {player_name}\n")
+        print(Fore.CYAN + "\nGoodbye. Thank you for playing\n")
         quit()
     elif chosen_language['language'] == Fore.YELLOW + "Display Rules again":
         print_tutorial()
         sleep(1)
-        return let_player_choose_language(player_name)
+        return let_player_choose_language()
 
     return chosen_language["language"]
 
@@ -386,7 +386,7 @@ def main():
         sleep(1)
         player_name = fetch_player_name()
     print(Fore.CYAN + "\nLanguage selection:\n")
-    language = let_player_choose_language(player_name)
+    language = let_player_choose_language()
     file_path = fetch_language_file_path(language)
     file = fetch_file(file_path)
     display_difficulty_explanation()
