@@ -224,12 +224,59 @@ Feel free to modify the code or assets to your liking and explore the different 
 
 ### Deployment
 
-To deploy the project via GitHub Pages:
+To deploy the Hangman game on **Heroku** using their web interface, follow these steps:
 
-1. Push the repository to your GitHub account.
-2. Go to the repository’s settings and navigate to the **Pages** section.
-3. Select the `main` branch and save changes.
-4. Your game will be live at `https://<your-github-username>.github.io/hangman`.
+#### 1. Create a Heroku Account
+
+- Go to [Heroku](https://www.heroku.com/) and sign up for a free account if you don’t have one.
+
+  ![Heroku Homepage](readme-images/heroku-images/heroku-home.png)
+
+#### 2. Create a New Heroku App
+
+- Log in to your Heroku dashboard.
+- Click **"New" → "Create new app"**.
+- Enter a unique app name and choose a region (e.g., Europe or United States).
+- Click **"Create app"**.
+  ![Heroku New App](readme-images/heroku-images/create-new-app.png)
+  ![Heroku New App](readme-images/heroku-images/create-new-app-two.png)
+
+#### 3. Connect to GitHub
+
+- In the **"Deploy"** tab, find the **"Deployment method"** section.
+- Select **GitHub** and click **"Connect to GitHub"**.
+- Search for your Hangman repository and connect it.
+
+  ![Heroku New App](readme-images/heroku-images/connect-github.png)
+
+#### 4. Configure Buildpacks
+
+- In the **"Settings"** tab, scroll down to **"Buildpacks"** and click **"Add buildpack"**.
+- Add **Python** and **NodeJs** as a buildpack.
+
+  ![Heroku New App](readme-images/heroku-images/connect-github.png)
+
+- Scroll down to **"Config Vars"** and add **"PORT"** as key and **"8000"** as value.
+  ![Heroku New App](readme-images/heroku-images/config-vars.png)
+
+#### 5. Deploy the Application
+
+- Go back to the **"Deploy"** tab.
+- Under **"Manual deploy"**, choose the branch (usually `main` or `master`).
+- Click **"Deploy Branch"** to start the deployment.
+- Wait for the build process to complete. If successful, Heroku will provide a link to your live app.
+
+  ![Heroku New App](readme-images/heroku-images/deploy-view.png)
+
+#### 6. Enable Automatic Deployments (Optional)
+
+- In the **"Automatic deploys"** section, click **"Enable Automatic Deploys"** to deploy new changes automatically when you push updates to GitHub.
+
+#### 7. Run the App
+
+- Click **"Open app"** in the top-right corner of the Heroku dashboard to view your deployed Hangman game.
+
+  ![Heroku New App](readme-images/heroku-images/open-app.png)
 
 ## Testing and Validation
 
