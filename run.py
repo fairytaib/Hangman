@@ -119,11 +119,11 @@ def let_player_guess_letter(file, player):
 
     if guess == "tip" and TIPAVAILABLE:
         help = fetch_tip(file)
+        player.health -= 1
         print(f"""{Fore.YELLOW}You bought a tip.
 {Fore.YELLOW}You have now {player.health} tries left.
 Here the tip: {help}
 """)
-        player.health -= 1
         TIPAVAILABLE = False
         sleep(1)
         return let_player_guess_letter(file, player)
