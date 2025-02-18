@@ -195,7 +195,7 @@ want the game to be, the less trys you will have.
 """)
 
 
-def fetch_custom_difficulty(player_name):
+def fetch_custom_difficulty():
     """Let the user decide how many guesses he wants to have"""
 
     global TIPAVAILABLE
@@ -226,8 +226,8 @@ def fetch_custom_difficulty(player_name):
         TIPAVAILABLE = False
         return 1
     elif chosen_difficulty["difficulty"] == Fore.CYAN + "Leave Game":
-        print(f"""{Fore.CYAN}\nGoodbye.
-Thank you very much for playing {player_name}\n""")
+        print("""{Fore.CYAN}\nGoodbye.
+Thank you very much for playing\n""")
         quit()
 
 
@@ -391,7 +391,7 @@ def main():
     file = fetch_file(file_path)
     display_difficulty_explanation()
     sleep(1)
-    playerHealth = fetch_custom_difficulty(player_name)
+    playerHealth = fetch_custom_difficulty()
     #  Skip function if User already exists
     if not player_exists:
         player = create_player(player_name, playerHealth)
