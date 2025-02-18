@@ -289,6 +289,11 @@ While Hangman is currently a functional and enjoyable game, there are some avenu
 
 - **Stack Overflow**: All kinds of different questions and anwsers from [Stack Overflow](https://stackoverflow.com/).
 
+**Libraries**
+
+- **Colorama**: Used to add colored text output for better user experience
+- **Inquirer**: Used to create interactive command-line menus for user input
+
 **Code Validation and Development Tools**
 
 - **Python Linter**: Code validation conducted using [CI Python Linter](https://pep8ci.herokuapp.com/#).
