@@ -310,6 +310,12 @@ During the development of Hangman, several challenges and bugs were encountered.
   - **Problem:** The simple-term-menu library, which was initially considered for creating interactive menus, proved to be incompatible with the Windows operating system.
   - **Solution:** Implemented the inquirer library as an alternative for creating interactive menus. This library provided cross-platform compatibility, ensuring that the menus function correctly on Windows as well.
 
+- Arguments Not Recognized in Functions:
+
+  - **Issue**: Constant variables were not recognized inside functions when passed as arguments.
+  - **Cause**: Unknown – the values were not being correctly referenced within the function scope.
+  - **Solution**: Declared these variables as **global** within the functions to ensure they were properly recognized and accessible.
+
 - General Observations
   - **Data Consistency:** The decision to use a custom word list improved the reliability of the game by ensuring that all words have corresponding definitions and are suitable for the game.
   - **User Experience:** The use of the colorama library enhanced the user experience by adding color and visual appeal to the game's interface.
