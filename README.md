@@ -2,7 +2,7 @@
 
 ![Title Image](./readme-images/start-view.png)
 
-## Descripttion
+## Description
 
 **Hangman** is a classic word-guessing game where one player thinks of a word, and the other tries to guess it by suggesting letters. The word is represented by a series of blank spaces, with each space corresponding to a letter. If the guessing player suggests a correct letter, it is revealed in its correct position(s). If they guess incorrectly, a part of a stick figure is drawn on a gallows. The game continues until the word is fully guessed or the drawing of the hangman is completed, resulting in a loss. Hangman is often played as a fun and educational game to improve vocabulary and spelling skills.
 
