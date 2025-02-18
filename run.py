@@ -111,6 +111,7 @@ def let_player_guess_letter(file, player):
 
     if guess == "":
         print(Fore.RED + "\nPlease enter at least one letter\n")
+        return let_player_guess_letter()
     elif not guess.isalpha():
         print(Fore.RED + "\nOnly letters are allowed\n")
         sleep(1)
@@ -172,6 +173,7 @@ start the game or 'q' to end programm: """).capitalize()
 
     if name == "":
         print(Fore.RED + "\nPlease enter at least one letter\n")
+        return fetch_player_name()
     elif not name.isalpha():
         print(Fore.RED + "\nPlease enter only letters and no whitespace.\n")
         return fetch_player_name()
