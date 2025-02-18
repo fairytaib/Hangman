@@ -267,12 +267,12 @@ def display_already_guessed_letters(wrong_letters):
 
 
 def check_for_already_guessed_letter(
-      guess, correct_guesses, incorrect_guesses, file, player
+      guess, correct_guesses, incorrect_guesses
       ):
     """Check the guess of the user and remind him of already guessed letters"""
     if guess in correct_guesses or guess in incorrect_guesses:
         print(Fore.YELLOW + "\nYou already guessed that letter. Try again.\n")
-        return let_player_guess_letter(file, player)
+        return None
     else:
         return guess
 
@@ -404,9 +404,11 @@ def main():
         if guessed_incorrect_letters:
             display_already_guessed_letters(guessed_incorrect_letters)
         guess = let_player_guess_letter(file, player)
-        check_for_already_guessed_letter(
+        guess = check_for_already_guessed_letter(
             guess, guessed_correct_letters,
-            guessed_incorrect_letters, file, player)
+            guessed_incorrect_letters)
+        if guess == None:
+            continue
         letter_validation = check_if_anwser_is_correct(guess, word)
         reduce_player_health(letter_validation, player)
         display_guess_confirmation(letter_validation, player)
