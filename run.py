@@ -409,7 +409,7 @@ def main():
         guess = check_for_already_guessed_letter(
             guess, guessed_correct_letters,
             guessed_incorrect_letters)
-        if guess == None:
+        if guess is None:
             continue
         letter_validation = check_if_anwser_is_correct(guess, word)
         reduce_player_health(letter_validation, player)
