@@ -378,7 +378,6 @@ def main():
     global player
     global guessed_correct_letters
     global guessed_incorrect_letters
-    global 
     reset_global_variables()
     #  Skip function if User already registered Name
     if player:
