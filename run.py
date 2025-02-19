@@ -29,7 +29,7 @@ PLAYEREXISTS = False
 #  Keeps track if the Tip was bought already
 TIPAVAILABLE = True
 #  Initialize player
-player_exists = None
+player = None
 
 
 def fetch_word(file):
@@ -231,9 +231,9 @@ Thank you very much for playing {player_name}\n""")
 
 def create_player(player_name, player_difficulty):
     """Create new Player instance"""
-    global player_exists
+    global player
     new_player = Player(player_name, player_difficulty)
-    player_exists = True
+    player = True
     return new_player
 
 
@@ -373,10 +373,10 @@ def reset_player_health(difficulty, player):
 
 
 def main():
-    global player_exists
+    global player
     reset_global_variables()
     #  Skip function if User already registered Name
-    if player_exists:
+    if player:
         pass
     else:
         print_welcome_message()
@@ -391,7 +391,7 @@ def main():
     sleep(1)
     playerHealth = fetch_custom_difficulty(player_name)
     #  Skip function if User already exists
-    if not player_exists:
+    if not player:
         player = create_player(player_name, playerHealth)
     else:
         reset_player_health(playerHealth, player)
