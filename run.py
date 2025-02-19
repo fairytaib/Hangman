@@ -360,12 +360,12 @@ def display_game_over(player, word):
 
 def reset_global_variables():
     """Reset global Variables such as guessed Letters and so on"""
-    global correct_list
-    global incorrect_list
+    global guessed_correct_letters
+    global guessed_incorrect_letters
     global random_instance
 
-    correct_list = []
-    incorrect_list = []
+    guessed_incorrect_letters = []
+    guessed_correct_letters = []
     random_instance = random.randint(0, 150)
 
 
