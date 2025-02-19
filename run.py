@@ -3,7 +3,7 @@ import random
 from time import sleep
 # import Colorama for colors
 import colorama
-from colorama import Fore, Back, Style
+from colorama import Fore
 # import Terminal Oprion Library
 import inquirer
 
@@ -111,7 +111,7 @@ def let_player_guess_letter(file, player):
 
     if guess == "":
         print(Fore.RED + "\nPlease enter at least one letter\n")
-        return let_player_guess_letter()
+        return let_player_guess_letter(file, player)
     elif not guess.isalpha():
         print(Fore.RED + "\nOnly letters are allowed\n")
         sleep(1)
