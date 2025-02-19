@@ -67,7 +67,7 @@ def fetch_file(file_path):
     return words
 
 
-def let_player_choose_language(player_name):
+def let_player_choose_language():
     """Let user choose his language to play in"""
     language_options = [
         inquirer.List(
@@ -84,12 +84,12 @@ def let_player_choose_language(player_name):
     chosen_language = inquirer.prompt(language_options)
 
     if chosen_language['language'] == Fore.RED + "Quit":
-        print(Fore.CYAN + f"\nGoodbye. Thank you for playing {player_name}\n")
+        print(Fore.CYAN + "\nGoodbye. Thank you for playing\n")
         quit()
     elif chosen_language['language'] == Fore.YELLOW + "Display Rules again":
         print_tutorial()
         sleep(1)
-        return let_player_choose_language(player_name)
+        return let_player_choose_language()
 
     return chosen_language["language"]
 
@@ -111,6 +111,7 @@ def let_player_guess_letter(file, player):
 
     if guess == "":
         print(Fore.RED + "\nPlease enter at least one letter\n")
+        return let_player_guess_letter()
     elif not guess.isalpha():
         print(Fore.RED + "\nOnly letters are allowed\n")
         sleep(1)
@@ -118,11 +119,11 @@ def let_player_guess_letter(file, player):
 
     if guess == "tip" and TIPAVAILABLE:
         help = fetch_tip(file)
+        player.health -= 1
         print(f"""{Fore.YELLOW}You bought a tip.
 {Fore.YELLOW}You have now {player.health} tries left.
 Here the tip: {help}
 """)
-        player.health -= 1
         TIPAVAILABLE = False
         sleep(1)
         return let_player_guess_letter(file, player)
@@ -172,6 +173,7 @@ start the game or 'q' to end programm: """).capitalize()
 
     if name == "":
         print(Fore.RED + "\nPlease enter at least one letter\n")
+        return fetch_player_name()
     elif not name.isalpha():
         print(Fore.RED + "\nPlease enter only letters and no whitespace.\n")
         return fetch_player_name()
@@ -193,7 +195,7 @@ want the game to be, the less trys you will have.
 """)
 
 
-def fetch_custom_difficulty(player_name):
+def fetch_custom_difficulty():
     """Let the user decide how many guesses he wants to have"""
 
     global TIPAVAILABLE
@@ -224,8 +226,8 @@ def fetch_custom_difficulty(player_name):
         TIPAVAILABLE = False
         return 1
     elif chosen_difficulty["difficulty"] == Fore.CYAN + "Leave Game":
-        print(f"""{Fore.CYAN}\nGoodbye.
-Thank you very much for playing {player_name}\n""")
+        print("""{Fore.CYAN}\nGoodbye.
+Thank you very much for playing\n""")
         quit()
 
 
@@ -265,12 +267,12 @@ def display_already_guessed_letters(wrong_letters):
 
 
 def check_for_already_guessed_letter(
-      guess, correct_guesses, incorrect_guesses, file, player
+      guess, correct_guesses, incorrect_guesses
       ):
     """Check the guess of the user and remind him of already guessed letters"""
     if guess in correct_guesses or guess in incorrect_guesses:
         print(Fore.YELLOW + "\nYou already guessed that letter. Try again.\n")
-        return let_player_guess_letter(file, player)
+        return None
     else:
         return guess
 
@@ -352,7 +354,7 @@ def display_game_over(player, word):
     else:
         print(f"""
 {Fore.GREEN}You won and you still had {player.health} tries left.
- Good job!{Fore.GREEN}The word was '{word}'!
+ Good job!{Fore.GREEN}The word was '{word.capitaliz()}'!
 """)
 
 
@@ -384,12 +386,12 @@ def main():
         sleep(1)
         player_name = fetch_player_name()
     print(Fore.CYAN + "\nLanguage selection:\n")
-    language = let_player_choose_language(player_name)
+    language = let_player_choose_language()
     file_path = fetch_language_file_path(language)
     file = fetch_file(file_path)
     display_difficulty_explanation()
     sleep(1)
-    playerHealth = fetch_custom_difficulty(player_name)
+    playerHealth = fetch_custom_difficulty()
     #  Skip function if User already exists
     if not player:
         player = create_player(player_name, playerHealth)
@@ -402,9 +404,11 @@ def main():
         if guessed_incorrect_letters:
             display_already_guessed_letters(guessed_incorrect_letters)
         guess = let_player_guess_letter(file, player)
-        check_for_already_guessed_letter(
+        guess = check_for_already_guessed_letter(
             guess, guessed_correct_letters,
-            guessed_incorrect_letters, file, player)
+            guessed_incorrect_letters)
+        if guess == None:
+            continue
         letter_validation = check_if_anwser_is_correct(guess, word)
         reduce_player_health(letter_validation, player)
         display_guess_confirmation(letter_validation, player)

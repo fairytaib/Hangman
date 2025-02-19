@@ -99,7 +99,6 @@ The development of the Hangman game started with conceptual planning. Using Mimo
 
 - `self.name` – Stores the player's name.
 - `self.health` – Represents the remaining attempts.
-- `guessLetter()` – A method for handling letter guesses.
 
 ### Word Selection & APIs
 
