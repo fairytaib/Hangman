@@ -354,7 +354,7 @@ def display_game_over(player, word):
     else:
         print(f"""
 {Fore.GREEN}You won and you still had {player.health} tries left.
- Good job!{Fore.GREEN}The word was '{word.capitalize()}'!
+Good job!{Fore.GREEN}The word was '{word.capitalize()}'!
 """)
 
 
